@@ -4,7 +4,7 @@
     <name>
       <brand>FormFutura</brand>
       <material>Helios</material>
-      <!-- <color>Natural</color> -->
+      <color> </color>
       <label>Helios</label>
     </name>
     <GUID>5905b419-3c22-4530-aa64-eb8153b16e6e</GUID>
@@ -12,13 +12,11 @@
     <!-- <color_code>#f5f2d1</color_code>-->
     <version>1</version>
     <definition>fdmprinter</definition>
-    <description>Helios Support is a “high heat” water-soluble PVA material which is engineered as support material for dual extrusion 3D printing in combination with engineering materials which require to be printed at higher temperatures and/or in heated build chambers. Helios support can be printed at nozzle temperatures up to 250° C without the risk of cross linking and nozzle clogging and adheres extremely well to styrene based materials such as ABS, TitanX, Crystal Flex, and ApolloX, but also to Python Flex and Volcano PLA.
+     <description>Helios Support is a “high heat” water-soluble PVA material which is engineered as support material for dual extrusion 3D printing in combination with engineering materials which require to be printed at higher temperatures and/or in heated build chambers. Helios support can be printed at nozzle temperatures up to 250° C without the risk of cross linking and nozzle clogging and adheres extremely well to styrene based materials such as ABS, TitanX, Crystal Flex, and ApolloX, but also to Python Flex and Volcano PLA.
 Helios Support dissolves slightly slower in water than normal PVA, but the dissolving process can be accelerated when using warm and circulating water. 
 
 Unique features
 Can be printed at nozzle temperatures up to 250° C
-
-
 
 No risk of cross linking and nozzle clogging
 Improved filament flowing behaviour
@@ -37,7 +35,10 @@ Heat bed: ± 35 - 60° C
 Fan speed: 0-25%
 Experience level: Expert eneral guidance for printing with PVA support materials
 
+
 Printing with PVA in general isn’t plug and play and does require a fair amount of 3D printing expertise as there isn’t a generic one-size-fits all setting for dual extrusion printing with PVA materials. The optimal PVA settings can even vary between the same models of 3D printers. 
+
+
 
 One of the most common challenges is to establish a good bond between the PVA support material and the primary building  material. Below parameters are of utmost importance to establish a good adherence.
 
@@ -48,6 +49,7 @@ The printing (nozzle) temperature is extremely important and it is advised to me
 If the actual temperature of the nozzle is for instance 10° C lower than the temperature in the print settings it might very well be that the layer of PVA support material is not flowing optimally into the layer of the primary building material. It is often seen that the actually nozzle temperature varies from the print temperature set in the slicing software.
 Verify if the nozzles of your printer are properly leveled and have exactly the same height, so that there is no “height difference” when layering the PVA support material on top of the primary building material.
 In order to verify this it is recommended to 3D print a 5cm x 1cm rod and to print every 1 to 2 layers with the left nozzle and the following 1 to 2 layers with the right nozzle and to repeat this process multiple times. If you notice a non-perfect layering then the nozzles aren’t properly leveled. This process can be done with PLA for instance.</adhesion_info>
+ 
   </metadata>
   <properties>
     <density>1.19</density>
@@ -64,9 +66,6 @@ In order to verify this it is recommended to 3D print a 5cm x 1cm rod and to pri
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
       <setting key="print cooling">100</setting>
-      <hotend id="BB 0.8">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
       <hotend id="AA 0.8">
         <setting key="hardware compatible">no</setting>
       </hotend>
@@ -83,6 +82,10 @@ In order to verify this it is recommended to 3D print a 5cm x 1cm rod and to pri
         <setting key="retraction amount">5.0</setting>
         <setting key="retraction speed">25.0</setting>
       </hotend>
+      <hotend id="BB 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+
       <buildplate id="Aluminum">
         <setting key="hardware compatible">no</setting>
         <setting key="hardware recommended">no</setting>
