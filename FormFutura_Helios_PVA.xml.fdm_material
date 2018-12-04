@@ -1,18 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<fdmmaterial version="1.3" xmlns="http://www.ultimaker.com/material">
+<fdmmaterial version="1.3" 
+  xmlns="http://www.ultimaker.com/material">
   <metadata>
     <name>
       <brand>FormFutura</brand>
-      <material>Helios-PVA</material>
-      <color> </color>
-      <label>Helios</label>
+      <material>Helios</material>
+      <color>Natural</color>
+      <label>Helios PVA</label>
     </name>
     <GUID>5905b419-3c22-4530-aa64-eb8153b16e6e</GUID>
-    <compatible>True</compatible> 
+    <compatible>True</compatible>
     <color_code>#f5f2d1</color_code>
     <version>1</version>
     <definition>fdmprinter</definition>
-     <description>Helios Support is a “high heat” water-soluble PVA material which is engineered as support material for dual extrusion 3D printing in combination with engineering materials which require to be printed at higher temperatures and/or in heated build chambers. Helios support can be printed at nozzle temperatures up to 250° C without the risk of cross linking and nozzle clogging and adheres extremely well to styrene based materials such as ABS, TitanX, Crystal Flex, and ApolloX, but also to Python Flex and Volcano PLA.
+    <description>Helios Support is a “high heat” water-soluble PVA material which is engineered as support material for dual extrusion 3D printing in combination with engineering materials which require to be printed at higher temperatures and/or in heated build chambers. Helios support can be printed at nozzle temperatures up to 250° C without the risk of cross linking and nozzle clogging and adheres extremely well to styrene based materials such as ABS, TitanX, Crystal Flex, and ApolloX, but also to Python Flex and Volcano PLA.
 Helios Support dissolves slightly slower in water than normal PVA, but the dissolving process can be accelerated when using warm and circulating water. 
 
 Unique features
@@ -49,7 +50,7 @@ The printing (nozzle) temperature is extremely important and it is advised to me
 If the actual temperature of the nozzle is for instance 10° C lower than the temperature in the print settings it might very well be that the layer of PVA support material is not flowing optimally into the layer of the primary building material. It is often seen that the actually nozzle temperature varies from the print temperature set in the slicing software.
 Verify if the nozzles of your printer are properly leveled and have exactly the same height, so that there is no “height difference” when layering the PVA support material on top of the primary building material.
 In order to verify this it is recommended to 3D print a 5cm x 1cm rod and to print every 1 to 2 layers with the left nozzle and the following 1 to 2 layers with the right nozzle and to repeat this process multiple times. If you notice a non-perfect layering then the nozzles aren’t properly leveled. This process can be done with PLA for instance.</adhesion_info>
- 
+
   </metadata>
   <properties>
     <density>1.19</density>
@@ -62,10 +63,10 @@ In order to verify this it is recommended to 3D print a 5cm x 1cm rod and to pri
     <setting key="adhesion tendency">0</setting>
     <setting key="standby temperature">175</setting>
     <setting key="relative extrusion">1.0</setting>
-   
+    <setting key="print cooling">0</setting>
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
-      <setting key="print cooling">100</setting>
+
       <hotend id="AA 0.8">
         <setting key="hardware compatible">no</setting>
       </hotend>
@@ -95,6 +96,6 @@ In order to verify this it is recommended to 3D print a 5cm x 1cm rod and to pri
         <setting key="hardware recommended">yes</setting>
       </buildplate>
     </machine>
-    
+
   </settings>
 </fdmmaterial>

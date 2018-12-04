@@ -8,7 +8,7 @@ import untangle
 config = {"id" : "", "key" : "", "hostname" : "ultimaker"}
 
 try:
-    config = yaml.load(open('configx.yaml'))
+    config = yaml.load(open('config.yaml'))
 except:
     print("WARNING: 'config.yaml' not found.\nConsider creating config.yaml file to store id, key, hostname and more....")
 
@@ -111,10 +111,9 @@ parser.add_option("-u", "--update",
                   help="udpate to printer")
 parser.add_option("-l", "--list", dest="list", action="store_true", default=False, help="List materials on Ultimaker S5, provide optional --filter string")
 parser.add_option("-F", "--filter", dest="filter", default=None, help="Filters listed materials filter string")
-parser.add_option("-g", "--guid", dest="guid", default=None, help="GUID of material")
-parser.add_option("-i", "--id", dest="id", default=None, help="digest authentication ID/user (use together with -k)")
-parser.add_option("-C", "--createkey", dest="createkey", action="store_true", default=False, help="create ID/KEY authentication credentials writing/deleting materials")
-parser.add_option("-k", "--key", dest="key", default=None, help="digest authentication KEY/password (use together with -i)")
+parser.add_option("-g", "--guid", dest="guid", default=None, help="GUID of material", metavar="<guid>")
+parser.add_option("-a", "--auth", dest="auth", default=None, help="digest authentication", metavar="<id>:<key>")
+parser.add_option("-C", "--createauth", dest="createauth", default=False, metavar="<application>:<user>", help="create ID:KEY authentication credentials writing/deleting materials. application is Name of the application that wants access. Displayed to the user. Name of the user who wants access. Displayed to the user when confirming access.")
 parser.add_option("-d", "--delete",
                   action="store_true", dest="delete", default=False,
                   help="delete material from printer with -g GUID or guid is extracted from material xml file")

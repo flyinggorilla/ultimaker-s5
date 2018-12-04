@@ -4,13 +4,13 @@
   <metadata>
     <name>
       <brand>FormFutura</brand>
-      <material>ASA</material>
+      <material>ApolloX</material>
       <color></color>
-      <label>ApolloX</label>
+      <label>ApolloX ASA</label>
     </name>
     <GUID>e2383de0-2913-4777-b0f3-a03767d96529</GUID>
-    <!-- <compatible>True</compatible> -->
-    <!-- <color_code>#f5f2d1</color_code>-->
+    <compatible>True</compatible>
+    <color_code>#f5f2d1</color_code>
     <version>1</version>
     <definition>fdmprinter</definition>
     <description>ApolloX is a professional high-performance engineering filament, which is based on an uniquely industrial-grade modified ASA (Acrylonitrile Styrene Acrylate) compound. ApolloX has been modified to have great thermal stability, improved filament flowing behavior, zero-warping and flawless first- and interlayer adhesion allowing you to 3D print objects with an almost injection-molded precision. ApolloX is UV and weather resistant and by that ensuring great color stability – combined with high strength and heat resistant properties – which makes ApolloX a perfect engineering filament for outdoor and automotive applications.
@@ -33,6 +33,7 @@ Experience level: Beginner / Intermediate</adhesion_info>
   <properties>
     <density>1.11</density>
     <diameter>2.85</diameter>
+    <weight>750</weight>
   </properties>
   <settings>
     <setting key="print temperature">245</setting>
@@ -57,6 +58,9 @@ Experience level: Beginner / Intermediate</adhesion_info>
           <setting key="print cooling">0.0</setting>
           <setting key="retraction amount">5.0</setting>
           <setting key="retraction speed">25.0</setting> -->
+      </hotend>
+        <hotend id="CC 0.6">
+        <setting key="hardware compatible">yes</setting>
       </hotend>
       <hotend id="BB 0.4">
         <setting key="hardware compatible">no</setting>

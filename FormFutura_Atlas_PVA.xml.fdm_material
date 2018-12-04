@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<fdmmaterial version="1.3" 
+  xmlns="http://www.ultimaker.com/material">
+  <metadata>
+    <name>
+      <brand>FormFutura</brand>
+      <material>Atlas</material>
+      <color>Natural</color>
+      <label>Atlas PVA</label>
+    </name>
+    <description>
+      Atlas Support is the next generation in PVA water-soluble support materials for FFF/FDM 3D printing. Atlas Support is the result of extensive research to PVA improvement which has resulted in an unique formulation where numerous PVA grades have been blended into one superior water soluble support material with improved thermal stability. 
+Atlas Support has good bonding to a wide variety of materials – such as PLA, ABS, PETG, ASA, HIPS, et cetera – and is much less sensitive to degradation by humidity.
+
+Unique features
+Excellent water solubility
+Excellent support material for complex dual extrusion prints!
+Improved thermal stability
+Much lesser risk of clogged nozzles caused by deteriorating/crystalizing material in (too) hot nozzle
+Good bonding to various (thermo)plastics
+Odourless processing
+Biodegradable once dissolved in water.
+    </description>
+    <adhesion_info>
+Nozzle size: ≥ 0.15mm
+Layer height: ≥ 0.1mm
+Flow rate: ± 100%
+Print temp: ± 180 - 205° C *
+Print speed: Medium
+Retraction: Yes ± 5mm
+Heat bed: ± 0 - 60° C
+Fan speed: 0-25%
+Experience level: Expert
+    </adhesion_info>
+    <color_code>#BE6F60</color_code>
+    <compatible>True</compatible>
+    <definition>fdmprinter</definition>
+    <version>9</version>
+    <GUID>dd96bf72-866b-4770-b23e-e800e10e8cfa</GUID>
+  </metadata>
+  <properties>
+    <density>1.22</density>
+    <diameter>2.85</diameter>
+    <weight>300</weight>
+  </properties>
+  <settings>
+    <setting key="surface energy">100</setting>
+    <setting key="heated bed temperature">60</setting>
+    <setting key="standby temperature">100</setting>
+    <setting key="print cooling">0.0</setting>
+    <setting key="print temperature">190.0</setting>
+    <setting key="adhesion tendency">0</setting>
+    <setting key="retraction amount">5</setting>
+    <setting key="print speed">50</setting>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="BB 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.25">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="AA 0.4">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="AA 0.8">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <buildplate id="Glass">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">yes</setting>
+      </buildplate>
+      <buildplate id="Aluminum">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">no</setting>
+      </buildplate>
+    </machine>
+  </settings>
+</fdmmaterial>

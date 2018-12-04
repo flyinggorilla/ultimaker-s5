@@ -4,7 +4,7 @@
     <name>
       <brand>FormFutura</brand>
       <material>HDglass</material>
-      <color> </color>
+      <color>See Through Black</color>
       <label>HDglass PETG</label>
     </name>
     <description>
@@ -26,11 +26,11 @@
       Fan speed: 50-100%
       Experience level: Beginner
     </adhesion_info>
-    <color_code>#d0d0d0</color_code>
+    <color_code>#F0F0F0</color_code>
     <compatible>True</compatible>
     <definition>fdmprinter</definition>
     <version>1</version>
-    <GUID>ff6aaf9e-3fb0-420a-bd05-7a652eefeb80</GUID>
+    <GUID>7e9be86b-ebef-40dc-9a3d-bcad6baa013d</GUID>
   </metadata>
   <properties>
     <density>1.27</density>

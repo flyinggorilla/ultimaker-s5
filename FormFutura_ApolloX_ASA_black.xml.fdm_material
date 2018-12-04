@@ -4,9 +4,9 @@
   <metadata>
     <name>
       <brand>FormFutura</brand>
-      <material>ASA</material>
+      <material>ApolloX</material>
       <color>black</color>
-      <label>ApolloX</label>
+      <label>ApolloX ASA</label>
     </name>
     <description>
       ApolloX is a professional high-performance engineering filament, 
@@ -75,6 +75,9 @@
         <setting key="hardware compatible">yes</setting>
       </hotend>
       <hotend id="AA 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+        <hotend id="CC 0.6">
         <setting key="hardware compatible">yes</setting>
       </hotend>
       <buildplate id="Glass">
