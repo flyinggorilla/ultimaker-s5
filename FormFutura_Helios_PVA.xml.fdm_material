@@ -3,13 +3,13 @@
   <metadata>
     <name>
       <brand>FormFutura</brand>
-      <material>Helios</material>
+      <material>Helios-PVA</material>
       <color> </color>
       <label>Helios</label>
     </name>
     <GUID>5905b419-3c22-4530-aa64-eb8153b16e6e</GUID>
-    <!-- <compatible>True</compatible> -->
-    <!-- <color_code>#f5f2d1</color_code>-->
+    <compatible>True</compatible> 
+    <color_code>#f5f2d1</color_code>
     <version>1</version>
     <definition>fdmprinter</definition>
      <description>Helios Support is a “high heat” water-soluble PVA material which is engineered as support material for dual extrusion 3D printing in combination with engineering materials which require to be printed at higher temperatures and/or in heated build chambers. Helios support can be printed at nozzle temperatures up to 250° C without the risk of cross linking and nozzle clogging and adheres extremely well to styrene based materials such as ABS, TitanX, Crystal Flex, and ApolloX, but also to Python Flex and Volcano PLA.

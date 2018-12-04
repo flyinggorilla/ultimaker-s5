@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8'?>
+<fdmmaterial version="1.3" xmlns="http://www.ultimaker.com/material">
+  <metadata>
+    <name>
+      <brand>FormFutura</brand>
+      <material>ASA</material>
+      <color>black</color>
+      <label>ApolloX</label>
+    </name>
+    <description>
+      ApolloX is a professional high-performance engineering filament, 
+      which is based on an uniquely industrial-grade modified 
+      ASA (Acrylonitrile Styrene Acrylate) compound. ApolloX has been 
+      modified to have great thermal stability, improved filament flowing 
+      behavior, zero-warping and flawless first- and interlayer adhesion 
+      allowing you to 3D print objects with an almost injection-molded 
+      precision. ApolloX is UV and weather resistant and by that ensuring 
+      great color stability – combined with high strength and heat 
+      resistant properties – which makes ApolloX a perfect engineering 
+      filament for outdoor and automotive applications.
+      Unique features
+      UV &amp; weather resistant
+      FDM/FFF-optimized
+      Warp-free printing
+      Optimized filament flowing behaviour, thermal stability, and inter-layer adhesion
+      Excellent adhesion to heated glass plate, Kapton tape, PET tape and Formfutura EasyPad
+      Greatly improved mechanical properties and strength
+      Extremely high printing precision
+      Printing with remarkable fine detail
+    </description>
+    <adhesion_info>
+        Nozzle size: ≥ 0.15mm
+        Layer height: ≥ 0.1mm
+        Flow rate: ± 100%
+        Print temp: ± 235 - 255° C *
+        Print speed: Medium
+        Retraction: Yes ± 5mm
+        Heat bed: ± 80 - 90° C *
+        Fan speed: 0-25%
+        Experience level: Beginner / Intermediate
+    </adhesion_info>
+    <color_code>#000000</color_code>
+    <compatible>True</compatible>
+    <definition>fdmprinter</definition>
+    <version>9</version>
+    <GUID>c99377f5-fbb4-4c3b-8f91-7a1d2c32e44f</GUID>
+  </metadata>
+  <properties>
+    <density>1.11</density>
+    <diameter>2.85</diameter>
+  </properties>
+  <settings>
+    <setting key="surface energy">100</setting>
+    <setting key="heated bed temperature">60</setting>
+    <setting key="standby temperature">175</setting>
+    <setting key="print temperature">200</setting>
+    <setting key="adhesion tendency">0</setting>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker B.V." product="ultimaker_s5" />
+      <setting key="print cooling">100</setting>
+      <hotend id="BB 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.25">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="standby temperature">100</setting>
+        <setting key="retraction amount">6.5</setting>
+      </hotend>
+      <hotend id="AA 0.4">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="retraction speed">25.0</setting>
+        <setting key="print cooling">0.0</setting>
+        <setting key="print temperature">245.0</setting>
+        <setting key="retraction amount">5.0</setting>
+        <setting key="heated bed temperature">88.0</setting>
+      </hotend>
+      <hotend id="AA 0.8">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="standby temperature">100</setting>
+        <setting key="retraction amount">5</setting>
+      </hotend>
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <buildplate id="Glass">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">yes</setting>
+      </buildplate>
+      <buildplate id="Aluminum">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">no</setting>
+      </buildplate>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker 3" />
+      <setting key="print cooling">100</setting>
+      <hotend id="BB 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.25">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="standby temperature">100</setting>
+        <setting key="retraction amount">6.5</setting>
+      </hotend>
+      <hotend id="AA 0.4">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="retraction speed">25.0</setting>
+        <setting key="print cooling">0.0</setting>
+        <setting key="print temperature">245.0</setting>
+        <setting key="retraction amount">5.0</setting>
+        <setting key="heated bed temperature">88.0</setting>
+      </hotend>
+      <hotend id="AA 0.8">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="standby temperature">100</setting>
+        <setting key="retraction amount">5</setting>
+      </hotend>
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <buildplate id="Glass">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">yes</setting>
+      </buildplate>
+      <buildplate id="Aluminum">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">no</setting>
+      </buildplate>
+    </machine>
+  </settings>
+</fdmmaterial>
