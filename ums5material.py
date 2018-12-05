@@ -5,10 +5,11 @@ import yaml
 import json
 import untangle
 
+## default config, override by creating  ums5material.config.yaml or specify authentication and url options 
 config = {"id" : "", "key" : "", "hostname" : "ultimaker"}
 
 try:
-    config = yaml.load(open('config.yaml'))
+    config = yaml.load(open('ums5material.config.yaml'))
 except:
     print("WARNING: 'config.yaml' not found.\nConsider creating config.yaml file to store id, key, hostname and more....")
 
@@ -23,7 +24,7 @@ def PostMaterial(hostname, id, key, filepath):
     f = {'file': (filename, open(filepath, "rb"), "text/xml")}
     r = requests.post("http://%s/api/v1/materials" % hostname, 
         files = f, auth = HTTPDigestAuth(id, key))
-    print("Posted %s %d %s " % (filepath, r.status_code, r.text))
+    print("Posted %s: %d %s" % (filepath, r.status_code, r.text))
 
 
 def ReadMetadata(filepath):
@@ -40,7 +41,7 @@ def ReadMetadata(filepath):
             metadata["label"] = u.fdmmaterial.metadata.name.label.cdata
         else:
             label = ""
-        print("Material found: %s %s %s %s {%s}" % (metadata["brand"], metadata["material"], 
+        print("Material found: %s %s %s %s %s" % (metadata["brand"], metadata["material"], 
             metadata["label"], metadata["color"], metadata["guid"]))
         
         #print(u.fdmmaterial.settings.machine)
@@ -68,7 +69,7 @@ def DeleteMaterial(hostname, id, key, filepath="", guid=None):
     r = requests.delete("http://%s/api/v1/materials/%s" % (hostname, guid), 
         auth = HTTPDigestAuth(api_id, api_key))
 
-    print("Deleted %s %d %s " % (filepath, r.status_code, r.text))
+    print("Deleted %s: %d %s" % (filepath, r.status_code, r.text))
 
 
 def UpdateMaterial(hostname, id, key, filepath = "", guid = None):
@@ -99,13 +100,29 @@ def ListMaterials(hostname, filter=None):
         #f.write(l.encode("utf-8"))
         #f.close()
 
+def CreateAuthKeys(hostname, application, user):
+    import requests
+
+    r = requests.post("http://%s/api/v1/auth/request" % hostname, { "application" : application, "user" : user})
+    if r.status_code != 200:
+        print("Error creating keys for %s and user %s. %d %s" % (application, user, r.status_code, r.text))
+        return None
+    j = r.json()
+    api_id = j["id"]
+    api_key = j["key"]
+    print("Keys generated: ID:KEY=%s:%s %d %s" % (api_id, api_key, r.status_code, r.text))
+    print("Please accept request on Ultimaker S5 display for application %s and user %s to use keys." % (application, user))
+    return (api_id, api_key)
+
+def VerifyAuth(hostname, id, key):
+    r = requests.get("http://ultimaker.linz.local/api/v1/auth/verify", auth = HTTPDigestAuth(id, key))
+    print("Verify authentication: %d %s" % (r.status_code, r.text))
 
 from optparse import OptionParser
 
 usage = "usage: %prog [options] [ultimaker-url] [material-filename]"
 parser = OptionParser(usage)
 parser.add_option("-f", "--file", dest="filename", metavar="FILE", help="Ultimaker S5 material XML file")
-#parser.add_option("-hn", "--hostname", dest="hostname", help="Ultimaker S5 hostname or IP address")
 parser.add_option("-u", "--update",
                   action="store_true", dest="update", default=False,
                   help="udpate to printer")
@@ -113,43 +130,79 @@ parser.add_option("-l", "--list", dest="list", action="store_true", default=Fals
 parser.add_option("-F", "--filter", dest="filter", default=None, help="Filters listed materials filter string")
 parser.add_option("-g", "--guid", dest="guid", default=None, help="GUID of material", metavar="<guid>")
 parser.add_option("-a", "--auth", dest="auth", default=None, help="digest authentication", metavar="<id>:<key>")
+parser.add_option("-s", "--storeconfig", dest="storeconfig", default=False, action="store_true", help="store given host and authentication information to config file.")
 parser.add_option("-C", "--createauth", dest="createauth", default=False, metavar="<application>:<user>", help="create ID:KEY authentication credentials writing/deleting materials. application is Name of the application that wants access. Displayed to the user. Name of the user who wants access. Displayed to the user when confirming access.")
+parser.add_option("-v", "--verifyauth", dest="verifyauth", default=False, action="store_true", help="Verify whether authentication against Ultimaker S5 REST api succeeds with provided ID/KEY.")
 parser.add_option("-d", "--delete",
                   action="store_true", dest="delete", default=False,
                   help="delete material from printer with -g GUID or guid is extracted from material xml file")
 (options, args) = parser.parse_args()
-#if len(args) != 1:
-    #parser.print_help()
-    #parser.error("invalid...")
-    #quit()
-
-from urllib.parse import urlparse
-
 
 for arg in args:
+    from urllib.parse import urlparse
     o = urlparse(arg)
     if o.scheme == "http":
         hostname = o.hostname
         print("Ultimaker S5 hostname: %s" % hostname)
+        config["hostname"] = hostname
     elif arg[-13:] == ".fdm_material":
         filename = arg
         print("Material filename: %s" % filename)
 
-if options.update:
+if options.auth:
+    a = options.auth.split(":")
+    if len(a) != 2:
+        parser.error("invalid authentication string. please provide <id>:<key>.")
+    config["id"]  = api_id  = a[0]
+    config["key"] = api_key = a[1]
+
+help = True
+if options.createauth:
+    import getpass
+    keys = CreateAuthKeys(hostname, __file__, getpass.getuser())
+    if keys:
+        config["id"] = keys[0]
+        config["key"] = keys[1]
+    help = False
+
+if options.verifyauth:
+    VerifyAuth(hostname, api_id, api_key)
+    help = False
+
+elif options.update:
     if not filename:
         parser.error("Please provide material filename")
     print("Contacting Ultimaker S5 at %s with ID %s" % (hostname, api_id))
     UpdateMaterial(hostname, api_id, api_key, filename)
-elif options.filter and hostname:
+    help = False
+
+elif options.list and hostname:
     ListMaterials(hostname, options.filter)
+    help = False
+
+elif options.delete:
+    guid = options.guid
+    if not hostname or len(hostname) < 3:
+        parser.error("Please provide URL or hostname in config.yaml")
+    if not guid:
+        if filename:
+            guid = ReadGuid(filename)
+            if not guid:
+                parser.error("No guid found in %s" % filename)
+        else:
+            parser.error("Please provide material GUID or material filename that provides the GUID")
+
+    DeleteMaterial(hostname, api_id, api_key, guid=guid)
+    help = False
+
 elif filename:
     md = ReadMetadata(filename)
-elif hostname and options.list:
-    ListMaterials(hostname)
-elif hostname and options.delete and options.guid:
-    DeleteMaterial(hostname, api_id, api_key, guid=options.guid)
-else:
+    help = False
+
+if options.storeconfig:
+    yaml.dump(config, open("ums5material.config.yaml", "w"))
+    print("stored config to ums5material.config.yaml")
+
+if help:
     parser.print_help()
         
-#TODO
-# check whether product="Ultimaker S5" ... cura export creates wrong product string
