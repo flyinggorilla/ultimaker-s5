@@ -11,7 +11,7 @@ config = {"id" : "", "key" : "", "hostname" : "ultimaker"}
 try:
     config = yaml.load(open('ums5material.config.yaml'))
 except:
-    print("WARNING: 'config.yaml' not found.\nConsider creating config.yaml file to store id, key, hostname and more....")
+    print("WARNING: 'ums5material.config.yaml' not found.\nConsider using -s option to create .config.yaml file to store id, key, hostname and more....")
 
 api_id = config["id"]
 api_key = config["key"]
@@ -200,9 +200,11 @@ elif filename:
     help = False
 
 if options.storeconfig:
-    yaml.dump(config, open("ums5material.config.yaml", "w"))
+    yaml.dump(config, open("ums5material.config.yaml", "w"), default_flow_style = False)
     print("stored config to ums5material.config.yaml")
+    help = False
 
 if help:
     parser.print_help()
         
+
