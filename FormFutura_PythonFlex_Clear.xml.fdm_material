@@ -4,9 +4,9 @@
   <metadata>
     <name>
       <brand>FormFutura</brand>
-      <material>PythonFlex</material>
+      <material>PythonFlex TPU</material>
       <color>Clear</color>
-      <label>PythonFlex TPU</label>
+      <label>Clear PythonFlex TPU</label>
     </name>
     <description>
      Python Flex is a high-performance flexible thermoplastic polyurethane (TPU) filament, which is designed for high speed printing on both direct drive and Bowden style extruders. Python Flex is an extremely easy to print flexible filament which can be printed directly on a glass plate without having to use the heatbed. Python Flex has a shore hardness of 98A and has great elastic properties as allows itself to be stretched up to 450% before breaking. Python Flex is extremely transparent in its natural form and has excellent resistance to oil, greases, microorganisms and abrasion.
@@ -52,7 +52,7 @@ Experience level: Intermediate
     <setting key="print cooling">75</setting>
     <setting key="print temperature">235.0</setting>
     <setting key="adhesion tendency">0</setting>
-    <setting key="retraction amount">5</setting>
+    <setting key="retraction amount">8.0</setting>
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
       <hotend id="BB 0.4">
