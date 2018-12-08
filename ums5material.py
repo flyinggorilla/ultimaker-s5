@@ -40,7 +40,7 @@ def ReadMetadata(filepath):
         if hasattr(u.fdmmaterial.metadata.name, "label"):
             metadata["label"] = u.fdmmaterial.metadata.name.label.cdata
         else:
-            label = ""
+            metadata["label"] = ""
         print("Material found: %s %s %s %s %s" % (metadata["brand"], metadata["material"], 
             metadata["label"], metadata["color"], metadata["guid"]))
         

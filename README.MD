@@ -10,3 +10,11 @@ Uploading filament profiles via REST API to printer to add custom print profiles
 
 Therefore use the python tool (tested with Python 3.7+) ums5material.py
 
+## Installing ums5material
+
+1. clone or copy from github
+
+
+1. python -m pip install requests
+1. python -m pip install untangle
+1. python -m pip install pyyaml
