@@ -35,59 +35,6 @@ python ums5material.py
 note: on Linux you might need to use python3 instead.
 
 ```
-python ums5material.py
-
-Usage: ums5material.py [options] [ultimaker-url] [material-filename]
-
-Options:
-  -h, --help            show this help message and exit
-  -f FILE, --file=FILE  Ultimaker S5 material XML file
-  -u, --update          udpate to printer
-  -l, --list            List materials on Ultimaker S5, provide optional
-                        --filter string
-  -F FILTER, --filter=FILTER
-                        Filters listed materials filter string
-  -g <guid>, --guid=<guid>
-                        GUID of material
-  -a <id>:<key>, --auth=<id>:<key>
-                        digest authentication
-  -s, --storeconfig     store given host and authentication information to
-                        config file.
-  -C <application>:<user>, --createauth=<application>:<user>
-                        create ID:KEY authentication credentials
-                        writing/deleting materials. application is Name of the
-                        application that wants access. Displayed to the user.
-                        Name of the user who wants access. Displayed to the
-                        user when confirming access.
-  -v, --verifyauth      Verify whether authentication against Ultimaker S5
-                        REST api succeeds with provided ID/KEY.
-  -d, --delete          delete material from printer with -g GUID or guid is
-                        extracted from material xml file
-
-C:\Users\bernd\OneDrive\Make\Ultimaker\ultimaker-s5>
-C:\Users\bernd\OneDrive\Make\Ultimaker\ultimaker-s5>python ums5material.py -C
-Keys generated: ID:KEY=8e54c3d79f35746547f06b9fd416d352:fa88da37b100807a7269d84a97381e4e6a8791191756f79dc28aa67c3bc7a382 200 {"id": "8e54c3d79f35746547f06b9fd416d352", "key": "fa88da37b100807a7269d84a97381e4e6a8791191756f79dc28aa67c3bc7a382"}
-Please accept request on Ultimaker S5 display for application ums5material.py and user bernd to use keys.
-
-C:\Users\bernd\OneDrive\Make\Ultimaker\ultimaker-s5>python ums5material.py -C
-Keys generated: ID:KEY=b957dc55728b6f2cbf6511c9d34964b0:ec973a01fe1577e1bd3d63d2510169ad2db8c78b6c8db5c773cb12d17dd81dc3 200 {"id": "b957dc55728b6f2cbf6511c9d34964b0", "key": "ec973a01fe1577e1bd3d63d2510169ad2db8c78b6c8db5c773cb12d17dd81dc3"}
-Please accept request on Ultimaker S5 display for application "ums5material.py" and user "bernd" to use keys.
-
-C:\Users\bernd\OneDrive\Make\Ultimaker\ultimaker-s5>python ums5material.py -u FormFutura_PythonFlex_Black.xml.fdm_material
-Material filename: FormFutura_PythonFlex_Black.xml.fdm_material
-Contacting Ultimaker S5 at ultimaker.linz.local with ID 082fba70255a02de03eb431c2dce774c
-Material found: FormFutura PythonFlex Black PythonFlex TPU Black 57d328ec-9b30-4c88-9158-7004035cd9d6
-Deleted FormFutura_PythonFlex_Black.xml.fdm_material: 200 {"message": "Remove successful", "result": true}
-Posted FormFutura_PythonFlex_Black.xml.fdm_material: 200 {"message": "Material profile stored", "result": true}
-
-C:\Users\bernd\OneDrive\Make\Ultimaker\ultimaker-s5>python ums5material.py -u FormFutura_PythonFlex_Black.xml.fdm_material
-Material filename: FormFutura_PythonFlex_Black.xml.fdm_material
-Contacting Ultimaker S5 at ultimaker.linz.local with ID 082fba70255a02de03eb431c2dce774c
-Material found: FormFutura PythonFlex Black PythonFlex TPU Black 57d328ec-9b30-4c88-9158-7004035cd9d6
-Deleted FormFutura_PythonFlex_Black.xml.fdm_material: 200 {"message": "Remove successful", "result": true}
-Posted FormFutura_PythonFlex_Black.xml.fdm_material: 200 {"message": "Material profile stored", "result": true}
-
-C:\Users\bernd\OneDrive\Make\Ultimaker\ultimaker-s5>python ums5material.py
 Usage: ums5material.py [options] [ultimaker-url] [material-filename]
 
 Options:
