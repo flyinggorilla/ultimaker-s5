@@ -111,7 +111,7 @@ def CreateAuthKeys(hostname, application, user):
     api_id = j["id"]
     api_key = j["key"]
     print("Keys generated: ID:KEY=%s:%s %d %s" % (api_id, api_key, r.status_code, r.text))
-    print("Please accept request on Ultimaker S5 display for application %s and user %s to use keys." % (application, user))
+    print('Please accept request on Ultimaker S5 display for application "%s" and user "%s" to use keys.' % (application, user))
     return (api_id, api_key)
 
 def VerifyAuth(hostname, id, key):
@@ -131,7 +131,7 @@ parser.add_option("-F", "--filter", dest="filter", default=None, help="Filters l
 parser.add_option("-g", "--guid", dest="guid", default=None, help="GUID of material", metavar="<guid>")
 parser.add_option("-a", "--auth", dest="auth", default=None, help="digest authentication", metavar="<id>:<key>")
 parser.add_option("-s", "--storeconfig", dest="storeconfig", default=False, action="store_true", help="store given host and authentication information to config file.")
-parser.add_option("-C", "--createauth", dest="createauth", default=False, metavar="<application>:<user>", help="create ID:KEY authentication credentials writing/deleting materials. application is Name of the application that wants access. Displayed to the user. Name of the user who wants access. Displayed to the user when confirming access.")
+parser.add_option("-C", "--createauth", dest="createauth", default=False, action="store_true", help="create ID:KEY authentication credentials writing/deleting materials. Please make sure to accept authorization request on Ultimaker S5 printer display.")
 parser.add_option("-v", "--verifyauth", dest="verifyauth", default=False, action="store_true", help="Verify whether authentication against Ultimaker S5 REST api succeeds with provided ID/KEY.")
 parser.add_option("-d", "--delete",
                   action="store_true", dest="delete", default=False,
