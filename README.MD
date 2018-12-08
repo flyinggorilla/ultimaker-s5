@@ -113,11 +113,11 @@ so your .xml.fdm_material should be updated like this...
     <name>
       <brand>FormFutura</brand>
       <material>PythonFlex</material>
-      <color>Black</color>
-      <label>Black PythonFlex TPU</label>
+      <color> </color>
+      <!-- <label>Black PythonFlex TPU</label> -->
     </name>
     <GUID>57d328ec-9b30-4c88-9158-7004035cd9d6</GUID>
-    <color_code>#000000</color_code>
+    <!-- <color_code>#000000</color_code> -->
     <compatible>True</compatible>
     <definition>fdmprinter</definition>
     <version>9</version>
@@ -130,12 +130,12 @@ so your .xml.fdm_material should be updated like this...
 so the following command will upload the new material. Note that the material will be overridden if it existed before
 
 ```
-python ums5material.py -u FormFutura_PythonFlex_Black.xml.fdm_material
+python ums5material.py -u FormFutura_PythonFlex_Generic.xml.fdm_material
 
-Material filename: FormFutura_PythonFlex_Black.xml.fdm_material
-Contacting Ultimaker S5 at ultimaker.linz.local with ID 082fba70255a02de03eb431c2dce774c
-Material found: FormFutura PythonFlex Black PythonFlex TPU Black 57d328ec-9b30-4c88-9158-7004035cd9d6
-Deleted FormFutura_PythonFlex_Black.xml.fdm_material: 200 {"message": "Remove successful", "result": true}
-Posted FormFutura_PythonFlex_Black.xml.fdm_material: 200 {"message": "Material profile stored", "result": true}
+Material filename: FormFutura_PythonFlex_Generic.xml.fdm_material
+Contacting Ultimaker S5 at ultimaker.local with ID 082fba70255a02de03eb431c2dce774c
+Material found: FormFutura PythonFlex PythonFlex TPU Generic 57d328ec-9b30-4c88-9158-7004035cd9d6
+Deleted FormFutura_PythonFlex_Generic.xml.fdm_material: 200 {"message": "Remove successful", "result": true}
+Posted FormFutura_PythonFlex_Generic.xml.fdm_material: 200 {"message": "Material profile stored", "result": true}
 ```
 
