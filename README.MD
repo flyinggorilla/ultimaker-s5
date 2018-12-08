@@ -139,3 +139,4 @@ Deleted FormFutura_PythonFlex_Generic.xml.fdm_material: 200 {"message": "Remove 
 Posted FormFutura_PythonFlex_Generic.xml.fdm_material: 200 {"message": "Material profile stored", "result": true}
 ```
 
+Note that the .dfm_material definitions with color information are good for Cura import. For the Ultimaker S5 printer display you should generate a Generic profile that has a single space character as `<color> </color>` definition. So you dont need to send the color versions to the printer.
