@@ -48,11 +48,12 @@ Experience level: Intermediate
   <settings>
     <setting key="surface energy">100</setting>
     <setting key="heated bed temperature">60</setting>
-    <setting key="standby temperature">100</setting>
+    <setting key="standby temperature">150</setting>
     <setting key="print cooling">100</setting>
     <setting key="print temperature">235.0</setting>
     <setting key="adhesion tendency">0</setting>
     <setting key="retraction amount">10.0</setting>
+    <setting key="flow">106</setting>
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
       <hotend id="BB 0.4">
