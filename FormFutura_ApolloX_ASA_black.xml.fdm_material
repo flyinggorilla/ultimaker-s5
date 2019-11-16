@@ -6,7 +6,7 @@
       <brand>FormFutura</brand>
       <material>ApolloX</material>
       <color>black</color>
-      <label>ApolloX ASA</label>
+      <label>ApolloX ASA Black</label>
     </name>
     <description>
       ApolloX is a professional high-performance engineering filament, 
@@ -28,6 +28,7 @@
       Greatly improved mechanical properties and strength
       Extremely high printing precision
       Printing with remarkable fine detail
+      (fg)
     </description>
     <adhesion_info>
         Nozzle size: ≥ 0.15mm
@@ -51,13 +52,33 @@
     <diameter>2.85</diameter>
   </properties>
   <settings>
-    <setting key="surface energy">100</setting>
-    <setting key="heated bed temperature">88</setting>
-    <setting key="standby temperature">100</setting>
-    <setting key="print cooling">0.0</setting>
-    <setting key="print temperature">245.0</setting>
+    <setting key="print temperature">245</setting>
+    <setting key="heated bed temperature">80</setting>
     <setting key="adhesion tendency">0</setting>
-    <setting key="retraction amount">5</setting>
+    <setting key="standby temperature">200</setting>
+    <setting key="relative extrusion">1.0</setting>
+    <setting key="anti ooze retract position">-4</setting>
+    <setting key="anti ooze retract speed">5</setting>
+    <setting key="break preparation position">-16</setting>
+    <setting key="break preparation speed">2</setting>
+    <setting key="break preparation temperature">240</setting>
+    <setting key="break position">-50</setting>
+    <setting key="break speed">25</setting>
+    <setting key="break temperature">80</setting>
+    <setting key="maximum park duration">300</setting>
+    <setting key="no load move factor">1.0</setting>
+    <setting key="flush purge speed">10</setting>
+    <setting key="end of filament purge speed">10</setting>
+    <setting key="flush purge length">60</setting>
+    <setting key="end of filament purge length">20</setting>
+    <setting key="build volume temperature">37</setting>    
+    <setting key="surface energy">70</setting>
+    <setting key="shrinkage percentage">0.9</setting>    
+    <!-- For material flow sensor -->
+    <setting key="relative extrusion">1.0</setting>
+    <setting key="flow sensor detection margin">0.8</setting>
+    <setting key="retract compensation">0</setting>
+
     <machine>
       <!--<machine_identifier manufacturer="Ultimaker B.V." product="ultimaker_s5" />-->
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />

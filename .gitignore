@@ -2,3 +2,5 @@ config.yaml
 fromprinter
 *.ipynb
 *.config.yaml
+__pycache__
+cpegenericmaterialstationversion.xml

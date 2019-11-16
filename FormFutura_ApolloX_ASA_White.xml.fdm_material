@@ -4,36 +4,52 @@
   <metadata>
     <name>
       <brand>FormFutura</brand>
-      <material>ApolloX</material>
-      <color></color>
-      <label>ApolloX ASA</label>
+      <material>ApolloX White</material>
+      <color>white</color>
+      <label>ApolloX ASA White</label>
     </name>
-    <GUID>e2383de0-2913-4777-b0f3-a03767d96529</GUID>
+    <description>
+      ApolloX is a professional high-performance engineering filament, 
+      which is based on an uniquely industrial-grade modified 
+      ASA (Acrylonitrile Styrene Acrylate) compound. ApolloX has been 
+      modified to have great thermal stability, improved filament flowing 
+      behavior, zero-warping and flawless first- and interlayer adhesion 
+      allowing you to 3D print objects with an almost injection-molded 
+      precision. ApolloX is UV and weather resistant and by that ensuring 
+      great color stability – combined with high strength and heat 
+      resistant properties – which makes ApolloX a perfect engineering 
+      filament for outdoor and automotive applications.
+      Unique features
+      UV &amp; weather resistant
+      FDM/FFF-optimized
+      Warp-free printing
+      Optimized filament flowing behaviour, thermal stability, and inter-layer adhesion
+      Excellent adhesion to heated glass plate, Kapton tape, PET tape and Formfutura EasyPad
+      Greatly improved mechanical properties and strength
+      Extremely high printing precision
+      Printing with remarkable fine detail
+            (fg)
+    </description>
+    <adhesion_info>
+        Nozzle size: ≥ 0.15mm
+        Layer height: ≥ 0.1mm
+        Flow rate: ± 100%
+        Print temp: ± 235 - 255° C *
+        Print speed: Medium
+        Retraction: Yes ± 5mm
+        Heat bed: ± 80 - 90° C *
+        Fan speed: 0-25%
+        Experience level: Beginner / Intermediate
+    </adhesion_info>
+    <color_code>#FFFFFF</color_code>
     <compatible>True</compatible>
-    <color_code>#f5f2d1</color_code>
-    <version>1</version>
     <definition>fdmprinter</definition>
-    <description>ApolloX is a professional high-performance engineering filament, which is based on an uniquely industrial-grade modified ASA (Acrylonitrile Styrene Acrylate) compound. ApolloX has been modified to have great thermal stability, improved filament flowing behavior, zero-warping and flawless first- and interlayer adhesion allowing you to 3D print objects with an almost injection-molded precision. ApolloX is UV and weather resistant and by that ensuring great color stability – combined with high strength and heat resistant properties – which makes ApolloX a perfect engineering filament for outdoor and automotive applications.
-        Unique features UV &amp; weather resistant FDM/FFF-optimized
-        Warp-free printing Optimized filament flowing behaviour, thermal stability, and inter-layer adhesion
-        Excellent adhesion to heated glass plate, Kapton tape, PET tape and Formfutura EasyPad
-Greatly improved mechanical properties and strength
-Extremely high printing precision
-Printing with remarkable fine detail (fg)</description>
-    <adhesion_info>Nozzle size: ≥ 0.15mm
-Layer height: ≥ 0.1mm
-Flow rate: ± 100%
-Print temp: ± 235 - 255° C *
-Print speed: Medium
-Retraction: Yes ± 5mm
-Heat bed: ± 80 - 90° C *
-Fan speed: 0-25%
-Experience level: Beginner / Intermediate</adhesion_info>
+    <version>9</version>
+    <GUID>3664c0c5-0b94-4edb-8ca4-f9d33c8d9b85</GUID>
   </metadata>
   <properties>
     <density>1.11</density>
     <diameter>2.85</diameter>
-    <weight>750</weight>
   </properties>
   <settings>
     <setting key="print temperature">245</setting>
@@ -64,39 +80,35 @@ Experience level: Beginner / Intermediate</adhesion_info>
     <setting key="retract compensation">0</setting>
 
     <machine>
+      <!--<machine_identifier manufacturer="Ultimaker B.V." product="ultimaker_s5" />-->
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
-      <setting key="print cooling">25</setting>
-      <hotend id="AA 0.8">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="AA 0.25">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="AA 0.4">
-        <setting key="hardware compatible">yes</setting>
-        <!-- <setting key="print temperature">245.0</setting>
-          <setting key="print cooling">0.0</setting>
-          <setting key="retraction amount">5.0</setting>
-          <setting key="retraction speed">25.0</setting> -->
-      </hotend>
-        <hotend id="CC 0.6">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
+      <setting key="print cooling">100</setting>
       <hotend id="BB 0.4">
         <setting key="hardware compatible">no</setting>
       </hotend>
       <hotend id="BB 0.8">
         <setting key="hardware compatible">no</setting>
       </hotend>
-      <buildplate id="Aluminum">
+      <hotend id="AA 0.25">
         <setting key="hardware compatible">yes</setting>
-        <setting key="hardware recommended">yes</setting>
-      </buildplate>
+      </hotend>
+      <hotend id="AA 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+        <hotend id="CC 0.6">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
       <buildplate id="Glass">
         <setting key="hardware compatible">yes</setting>
         <setting key="hardware recommended">yes</setting>
       </buildplate>
+      <buildplate id="Aluminum">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">no</setting>
+      </buildplate>
     </machine>
-
   </settings>
 </fdmmaterial>

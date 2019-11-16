@@ -9,8 +9,7 @@
       <label>Atlas PVA</label>
     </name>
     <description>
-      Atlas Support is the next generation in PVA water-soluble support materials for FFF/FDM 3D printing. Atlas Support is the result of extensive research to PVA improvement which has resulted in an unique formulation where numerous PVA grades have been blended into one superior water soluble support material with improved thermal stability. 
-Atlas Support has good bonding to a wide variety of materials – such as PLA, ABS, PETG, ASA, HIPS, et cetera – and is much less sensitive to degradation by humidity.
+      Atlas Support is best with HDGlass.
 
 Unique features
 Excellent water solubility
@@ -52,6 +51,23 @@ Experience level: Expert
     <setting key="adhesion tendency">0</setting>
     <setting key="retraction amount">5</setting>
     <setting key="print speed">50</setting>
+    <setting key="anti ooze retract position">-4</setting>
+    <setting key="anti ooze retract speed">5</setting>
+    <setting key="break preparation position">-16</setting>
+    <setting key="break preparation speed">2</setting>
+    <setting key="break preparation temperature">240</setting>
+    <setting key="break position">-50</setting>
+    <setting key="break speed">25</setting>
+    <setting key="break temperature">70</setting>
+    <setting key="maximum park duration">300</setting>
+    <setting key="no load move factor">1.0</setting>
+    <setting key="flush purge speed">10</setting>
+    <setting key="end of filament purge speed">10</setting>
+    <setting key="flush purge length">60</setting>
+    <setting key="end of filament purge length">20</setting>
+    <setting key="build volume temperature">37</setting>    <!-- For material flow sensor -->
+    <setting key="flow sensor detection margin">0.8</setting>
+    <setting key="retract compensation">0</setting>    
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
       <hotend id="BB 0.4">

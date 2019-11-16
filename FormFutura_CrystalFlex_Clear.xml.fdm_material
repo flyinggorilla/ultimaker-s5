@@ -6,7 +6,7 @@
       <brand>FormFutura</brand>
       <material>CrystalFlex</material>
       <color>Clear</color>
-      <label>CrystalFlex SBC</label>
+      <label>CrystalFlex SBC Clear</label>
     </name>
     <description>
       Crystal Flex is a high-performance and easy to use Styrene-Butadiene Copolymer based 3D printer filament, which combines strength, resilience, semi-flexibility and transparency with printability. 
@@ -54,6 +54,23 @@ Experience level: Beginner / Intermediate
     <setting key="print temperature">245.0</setting>
     <setting key="adhesion tendency">0</setting>
     <setting key="retraction amount">5</setting>
+    <setting key="anti ooze retract position">-4</setting>
+    <setting key="anti ooze retract speed">5</setting>
+    <setting key="break preparation position">-16</setting>
+    <setting key="break preparation speed">2</setting>
+    <setting key="break preparation temperature">240</setting>
+    <setting key="break position">-50</setting>
+    <setting key="break speed">25</setting>
+    <setting key="break temperature">70</setting>
+    <setting key="maximum park duration">300</setting>
+    <setting key="no load move factor">1.0</setting>
+    <setting key="flush purge speed">10</setting>
+    <setting key="end of filament purge speed">10</setting>
+    <setting key="flush purge length">60</setting>
+    <setting key="end of filament purge length">20</setting>
+    <setting key="build volume temperature">37</setting>    <!-- For material flow sensor -->
+    <setting key="flow sensor detection margin">0.8</setting>
+    <setting key="retract compensation">0</setting>    
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
       <hotend id="BB 0.4">
