@@ -3,10 +3,24 @@
   <metadata>
     <name>
       <brand>FormFutura</brand>
-      <material>ApolloX WHITE</material>
-      <color>white</color>
-      <label>ApolloX WHITE</label>
+      <material>ApolloX</material>
+      <color>red</color>
+      <label>Red ApolloX</label>
     </name>
+    <adhesion_info>
+        Nozzle size: ≥ 0.15mm
+        Layer height: ≥ 0.1mm
+        Flow rate: ± 100%
+        Print temp: ± 235 - 255° C *
+        Print speed: Medium
+        Retraction: Yes ± 5mm
+        Heat bed: ± 80 - 90° C *
+        Fan speed: 0-25%
+        Experience level: Beginner / Intermediate
+    </adhesion_info>
+    <version>9</version>
+    <GUID>1403a419-2a22-4d6c-ad80-3ea3252d2496</GUID>
+    <color_code>#FF0000</color_code>
     <description>
       ApolloX is a professional high-performance engineering filament, 
       which is based on an uniquely industrial-grade modified 
@@ -29,86 +43,54 @@
       Printing with remarkable fine detail
             (fg)
     </description>
-    <adhesion_info>
-        Nozzle size: ≥ 0.15mm
-        Layer height: ≥ 0.1mm
-        Flow rate: ± 100%
-        Print temp: ± 235 - 255° C *
-        Print speed: Medium
-        Retraction: Yes ± 5mm
-        Heat bed: ± 80 - 90° C *
-        Fan speed: 0-25%
-        Experience level: Beginner / Intermediate
-    </adhesion_info>
-    <color_code>#FFFFFF</color_code>
-    <compatible>True</compatible>
-    <definition>fdmprinter</definition>
-    <version>22</version>
-    <GUID>3664c0c5-0b94-4edb-8ca4-f9d33c8d9b85</GUID>
   </metadata>
   <properties>
-    <weight>750</weight>
     <density>1.11</density>
     <diameter>2.85</diameter>
   </properties>
   <settings>
-    <setting key="print temperature">245</setting>
-    <setting key="heated bed temperature">90</setting>
-    <setting key="adhesion tendency">0</setting>
-    <setting key="standby temperature">200</setting>
-    <setting key="relative extrusion">1.0</setting>
-    <setting key="anti ooze retract position">-4</setting>
-    <setting key="anti ooze retract speed">5</setting>
-    <setting key="break preparation position">-16</setting>
-    <setting key="break preparation speed">2</setting>
-    <setting key="break preparation temperature">240</setting>
+    <setting key="shrinkage percentage">0.9</setting>
     <setting key="break position">-50</setting>
+    <setting key="break preparation speed">2</setting>
+    <setting key="adhesion tendency">0</setting>
+    <setting key="flush purge speed">10</setting>
+    <setting key="standby temperature">200</setting>
+    <setting key="break preparation position">-16</setting>
+    <setting key="break preparation temperature">240</setting>
+    <setting key="maximum park duration">300</setting>
+    <setting key="print temperature">245</setting>
+    <setting key="flush purge length">60</setting>
+    <setting key="build volume temperature">37</setting>
+    <setting key="anti ooze retract speed">5</setting>
+    <setting key="no load move factor">1.0</setting>
+    <setting key="end of filament purge length">20</setting>
+    <setting key="end of filament purge speed">10</setting>
+    <setting key="heated bed temperature">90</setting>
     <setting key="break speed">25</setting>
     <setting key="break temperature">80</setting>
-    <setting key="maximum park duration">300</setting>
-    <setting key="no load move factor">1.0</setting>
-    <setting key="flush purge speed">10</setting>
-    <setting key="end of filament purge speed">10</setting>
-    <setting key="flush purge length">60</setting>
-    <setting key="end of filament purge length">20</setting>
-    <setting key="build volume temperature">37</setting>    
+    <setting key="anti ooze retract position">-4</setting>
     <setting key="surface energy">70</setting>
-    <setting key="shrinkage percentage">0.9</setting>    
-    <!-- For material flow sensor -->
-    <setting key="relative extrusion">1.0</setting>
-    <setting key="flow sensor detection margin">0.8</setting>
-    <setting key="retract compensation">0</setting>
-
     <machine>
-      <!--<machine_identifier manufacturer="Ultimaker B.V." product="ultimaker_s5" />-->
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
       <setting key="print cooling">100</setting>
-      <hotend id="BB 0.4">
-        <setting key="hardware compatible">no</setting>
-      </hotend>
-      <hotend id="BB 0.8">
-        <setting key="hardware compatible">no</setting>
-      </hotend>
-      <hotend id="AA 0.25">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="AA 0.4">
+      <hotend id="CC 0.6">
         <setting key="hardware compatible">yes</setting>
       </hotend>
       <hotend id="AA 0.8">
         <setting key="hardware compatible">yes</setting>
       </hotend>
-        <hotend id="CC 0.6">
+      <hotend id="AA 0.4">
         <setting key="hardware compatible">yes</setting>
       </hotend>
-      <buildplate id="Glass">
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="AA 0.25">
         <setting key="hardware compatible">yes</setting>
-        <setting key="hardware recommended">yes</setting>
-      </buildplate>
-      <buildplate id="Aluminum">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="hardware recommended">no</setting>
-      </buildplate>
+      </hotend>
+      <hotend id="BB 0.8">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
     </machine>
   </settings>
 </fdmmaterial>
