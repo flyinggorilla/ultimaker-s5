@@ -3,7 +3,7 @@
 I am going to share my experiences with Ultimaker S5 and Ultimaker Material-station here. While a few FormFutura materials are now available in the Cura Marketplace for download, the issue is that it does not provide color information so that it can be assigned to a bay in material station. Furthermore do I use additional FormFutura materials alongside Ultimaker materials.
 
 ## Materials-Station
-as of S5 Firmware 5.4.27.20191212 there is no color information displayed with materials. this is ok for NFC based ultimaker material with color auto-detection, but not when manually assigning a 3rd party material to a material station bay.
+as of Cura 4.5 and S5 Firmware 5.5.12.20200226 there is no color information displayed with materials. this is ok for NFC based ultimaker material with color auto-detection, but not when manually assigning a 3rd party material to a material station bay.
 ![no color information](no_color_info.jpg)
 
 The workaround for now is to turn every color variant into a unique material. This is what i did here for e.g. with ApolloX material.
