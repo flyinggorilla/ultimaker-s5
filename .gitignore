@@ -4,3 +4,6 @@ fromprinter
 *.config.yaml
 __pycache__
 cpegenericmaterialstationversion.xml
+fullnamed
+*XApolloX*
+updateXmaterials*

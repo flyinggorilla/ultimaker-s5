@@ -56,7 +56,6 @@
     <setting key="print temperature">245</setting>
     <setting key="heated bed temperature">90</setting>
     <setting key="adhesion tendency">0</setting>
-    <setting key="standby temperature">85</setting>
     <setting key="relative extrusion">1.0</setting>
     <setting key="anti ooze retract position">-4</setting>
     <setting key="anti ooze retract speed">5</setting>
@@ -80,6 +79,8 @@
     <setting key="flow sensor detection margin">0.8</setting>
     <setting key="retract compensation">0</setting>
     <setting key="print cooling">10</setting>
+    <setting key="standby temperature">85</setting>
+    <setting key="retraction amount">5</setting>        
 
     <machine>
       <!--<machine_identifier manufacturer="Ultimaker B.V." product="ultimaker_s5" />-->
