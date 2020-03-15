@@ -38,32 +38,34 @@
     <weight>750</weight>
   </properties>
   <settings>
-    <setting key="retraction speed">40</setting>
-    <setting key="print cooling">50.0</setting>
-    <setting key="print temperature">210.0</setting>
+    <setting key="retraction speed">50</setting>
+    <setting key="print cooling">30</setting>
+    <setting key="print temperature">240.0</setting>
     <setting key="standby temperature">80.0</setting>
     <setting key="retraction amount">8.0</setting>
-    <setting key="heated bed temperature">75.0</setting>
-    <setting key="adhesion tendency">0</setting>
-    <setting key="relative extrusion">1.0</setting>
-    <setting key="surface energy">100</setting>
-    <setting key="anti ooze retract position">-4</setting>
-    <setting key="anti ooze retract speed">5</setting>
+    <setting key="heated bed temperature">80.0</setting>
+    <setting key="relative extrusion">1.05</setting>
+    <setting key="anti ooze retract position">-5</setting>
+    <setting key="anti ooze retract speed">10</setting>
     <setting key="break preparation position">-16</setting>
     <setting key="break preparation speed">2</setting>
-    <setting key="break preparation temperature">240</setting>
+    <setting key="break preparation temperature">250</setting>
     <setting key="break position">-50</setting>
-    <setting key="break speed">25</setting>
-    <setting key="break temperature">70</setting>
+    <setting key="break speed">5</setting>
+    <setting key="break temperature">90</setting>
     <setting key="maximum park duration">300</setting>
     <setting key="no load move factor">1.0</setting>
     <setting key="flush purge speed">10</setting>
     <setting key="end of filament purge speed">10</setting>
     <setting key="flush purge length">60</setting>
     <setting key="end of filament purge length">20</setting>
-    <setting key="build volume temperature">37</setting>    <!-- For material flow sensor -->
+    <setting key="build volume temperature">40</setting>    <!-- For material flow sensor -->
+    <!--
+    <setting key="surface energy">100</setting>
+    <setting key="adhesion tendency">0</setting>
     <setting key="flow sensor detection margin">0.8</setting>
-    <setting key="retract compensation">0</setting> 
+    <setting key="retract compensation">0</setting>    
+    -->
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
       <hotend id="BB 0.8">
