@@ -43,7 +43,7 @@
     <color_code>#FFFFFF</color_code>
     <compatible>True</compatible>
     <definition>fdmprinter</definition>
-    <version>22</version>
+    <version>23</version>
     <GUID>3664c0c5-0b94-4edb-8ca4-f9d33c8d9b85</GUID>
   </metadata>
   <properties>
@@ -58,19 +58,19 @@
     <setting key="relative extrusion">1.0</setting>
     <setting key="anti ooze retract position">-4</setting>
     <setting key="anti ooze retract speed">5</setting>
-    <setting key="break preparation position">-16</setting>
-    <setting key="break preparation speed">2</setting>
-    <setting key="break preparation temperature">240</setting>
-    <setting key="break position">-50</setting>
-    <setting key="break speed">25</setting>
-    <setting key="break temperature">80</setting>
+    <setting key="break preparation position">-16</setting> <!-- How far the filament can be stretched before it breaks, while heated -->
+    <setting key="break preparation speed">2</setting> <!-- How fast the filament needs to be retracted just before breaking it off in a retraction [mm/s]-->
+    <setting key="break preparation temperature">255</setting> <!-- The temperature used to purge material, should be roughly equal to the highest possible printing temperature -->
+    <setting key="break position">-50</setting> <!-- How far to retract the filament in order to break it cleanly -->
+    <setting key="break speed">25</setting> <!-- [mm/s] The speed at which to retract the filament in order to break it cleanly -->
+    <setting key="break temperature">105</setting> <!-- The temperature at which the filament is broken for a clean break -->
     <setting key="maximum park duration">300</setting>
-    <setting key="no load move factor">1.0</setting>
-    <setting key="flush purge speed">10</setting>
-    <setting key="end of filament purge speed">10</setting>
-    <setting key="flush purge length">60</setting>
+    <setting key="no load move factor">0.98</setting> <!-- [default: 0.940860215] A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch -->
+    <setting key="flush purge speed">0.5</setting> <!-- How fast to prime the material after switching to a different material. -->
+    <setting key="flush purge length">50</setting> <!-- How much material to use to purge the previous material out of the nozzle (in length of filament) when switching to a different material -->
+    <setting key="end of filament purge speed">0.5</setting> <!-- How fast to prime the material after replacing an empty spool with a fresh spool of the same material-->
     <setting key="end of filament purge length">20</setting>
-    <setting key="build volume temperature">45</setting>    
+    <setting key="build volume temperature">44</setting>    
     <setting key="surface energy">70</setting>
     <setting key="shrinkage percentage">0.9</setting>    
     <!-- For material flow sensor -->
@@ -80,6 +80,7 @@
     <setting key="print cooling">10</setting>
     <setting key="standby temperature">85</setting>
     <setting key="retraction amount">5</setting>        
+     
     <machine>
       <!--<machine_identifier manufacturer="Ultimaker B.V." product="ultimaker_s5" />-->
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />

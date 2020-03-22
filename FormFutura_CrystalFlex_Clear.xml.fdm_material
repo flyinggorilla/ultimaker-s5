@@ -38,7 +38,7 @@ Experience level: Beginner / Intermediate
     <color_code>#000000</color_code>
     <compatible>True</compatible>
     <definition>fdmprinter</definition>
-    <version>9</version>
+    <version>10</version>
     <GUID>a740135c-f874-4a14-99eb-15a04353d268</GUID>
   </metadata>
   <properties>
@@ -58,17 +58,17 @@ Experience level: Beginner / Intermediate
     <setting key="anti ooze retract speed">5</setting>
     <setting key="break preparation position">-16</setting>
     <setting key="break preparation speed">2</setting>
-    <setting key="break preparation temperature">240</setting>
+    <setting key="break preparation temperature">255</setting>
     <setting key="break position">-50</setting>
     <setting key="break speed">25</setting>
     <setting key="break temperature">70</setting>
     <setting key="maximum park duration">300</setting>
     <setting key="no load move factor">1.0</setting>
-    <setting key="flush purge speed">10</setting>
-    <setting key="end of filament purge speed">10</setting>
+    <setting key="flush purge speed">1</setting>
+    <setting key="end of filament purge speed">1</setting>
     <setting key="flush purge length">60</setting>
     <setting key="end of filament purge length">20</setting>
-    <setting key="build volume temperature">37</setting>    <!-- For material flow sensor -->
+    <setting key="build volume temperature">44</setting>    <!-- For material flow sensor -->
     <setting key="flow sensor detection margin">0.8</setting>
     <setting key="retract compensation">0</setting>    
     <machine>
