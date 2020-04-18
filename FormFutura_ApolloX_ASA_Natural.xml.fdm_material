@@ -55,7 +55,7 @@
   <settings>
     <setting key="print temperature">245</setting>
     <setting key="heated bed temperature">90</setting>
-    <setting key="adhesion tendency">0</setting>
+    <setting key="adhesion tendency">10</setting> <!-- relative adhesion, the higher the number then outer shell of prime tower -->
     <setting key="relative extrusion">1.0</setting>
     <setting key="anti ooze retract position">-4</setting>
     <setting key="anti ooze retract speed">5</setting>
@@ -73,7 +73,12 @@
     <setting key="end of filament purge length">20</setting>
     <setting key="build volume temperature">44</setting>    
     <setting key="surface energy">70</setting>
-    <setting key="shrinkage percentage">0.9</setting>    
+    
+    <!-- <setting key="shrinkage percentage">0.9</setting>    DELETE not used anyway -->
+    <!-- NEW*************************-->
+    <setting key="horizontal expansion">-0.2</setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
+    <setting key="initial layer horizontal expansion">-0.1<setting> <!--Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"-->
+    <setting key="fan speed">25.0</setting>
     <!-- For material flow sensor -->
     <setting key="relative extrusion">1.0</setting>
     <setting key="flow sensor detection margin">0.8</setting>
