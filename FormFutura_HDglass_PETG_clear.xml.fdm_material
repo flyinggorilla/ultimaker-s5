@@ -19,11 +19,11 @@
       Nozzle size: ≥ 0.15mm
       Layer height: ≥ 0.1mm
       Flow rate: ± 110%
-      Print temp: ± 195 - 225° C
+      Print temp: ± 220 - 260° C
       Print speed: High
       Retraction: Yes ± 6mm
-      Heat bed: ± 65 - 75° C
-      Fan speed: 50-100%
+      Heat bed: ± 60 - 80° C
+      Fan speed: 30-100%
       Experience level: Beginner
     </adhesion_info>
     <color_code>#d0d0d0</color_code>
