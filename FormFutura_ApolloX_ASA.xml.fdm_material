@@ -95,6 +95,31 @@ Experience level: Beginner / Intermediate</adhesion_info>
         <setting key="hardware recommended">yes</setting>
       </buildplate>
     </machine>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S3" />
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="BB 0.8">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="AA 0.25">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+        <hotend id="CC 0.6">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <buildplate id="Glass">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">yes</setting>
+      </buildplate>
+    </machine>       
 
   </settings>
 </fdmmaterial>

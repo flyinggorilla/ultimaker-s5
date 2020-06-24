@@ -5,11 +5,13 @@ import yaml
 import json
 import untangle
 
+## pip install untangle
+
 ## default config, override by creating  ums5material.config.yaml or specify authentication and url options 
 config = {"id" : "", "key" : "", "hostname" : "ultimaker"}
 
 try:
-    config = yaml.load(open('ums5material.config.yaml'))
+    config = yaml.load(open('ums5material.config.yaml'), Loader=yaml.FullLoader)
 except:
     print("WARNING: 'ums5material.config.yaml' not found.\nConsider using -s option to create .config.yaml file to store id, key, hostname and more....")
 

@@ -11,7 +11,7 @@
     <GUID>5905b419-3c22-4530-aa64-eb8153b16e6e</GUID>
     <compatible>True</compatible>
     <color_code>#f5f2d1</color_code>
-    <version>1</version>
+    <version>2</version>
     <definition>fdmprinter</definition>
     <description>Helios Support is a “high heat” water-soluble PVA material which is engineered as support material for dual extrusion 3D printing in combination with engineering materials which require to be printed at higher temperatures and/or in heated build chambers. Helios support can be printed at nozzle temperatures up to 250° C without the risk of cross linking and nozzle clogging and adheres extremely well to styrene based materials such as ABS, TitanX, Crystal Flex, and ApolloX, but also to Python Flex and Volcano PLA.
 Helios Support dissolves slightly slower in water than normal PVA, but the dissolving process can be accelerated when using warm and circulating water. 
@@ -57,30 +57,31 @@ In order to verify this it is recommended to 3D print a 5cm x 1cm rod and to pri
     <diameter>2.85</diameter>
   </properties>
   <settings>
-    <setting key="print temperature">240</setting>
-    <setting key="heated bed temperature">60</setting>
-    <setting key="surface energy">100</setting>
-    <setting key="adhesion tendency">0</setting>
-    <setting key="standby temperature">80</setting>
+    <setting key="print temperature">245</setting>
+    <setting key="standby temperature">180</setting>
+    <setting key="heated bed temperature">80</setting>
+    <setting key="build volume temperature">44</setting>    
     <setting key="relative extrusion">1.0</setting>
     <setting key="print cooling">0</setting>
-    <setting key="anti ooze retract position">-4</setting>
-    <setting key="anti ooze retract speed">5</setting>
+    <setting key="anti ooze retract position">-2</setting>
+    <setting key="anti ooze retract speed">15</setting>
     <setting key="break preparation position">-16</setting>
     <setting key="break preparation speed">2</setting>
     <setting key="break preparation temperature">250</setting>
     <setting key="break position">-50</setting>
     <setting key="break speed">25</setting>
-    <setting key="break temperature">100</setting>
-    <setting key="maximum park duration">300</setting>
-    <setting key="no load move factor">1.0</setting>
-    <setting key="flush purge speed">1</setting>
-    <setting key="end of filament purge speed">1</setting>
-    <setting key="flush purge length">50</setting>
+    <setting key="break temperature">170</setting>
+    <setting key="maximum park duration">216000</setting>
+    <setting key="no load move factor">0.94</setting>
+    <setting key="flush purge speed">0.5</setting>
+    <setting key="end of filament purge speed">0.5</setting>
+    <setting key="flush purge length">100</setting>
     <setting key="end of filament purge length">20</setting>
-    <setting key="build volume temperature">44</setting>    <!-- For material flow sensor -->
     <setting key="flow sensor detection margin">0.8</setting>
     <setting key="retract compensation">0</setting>
+    <setting key="material_crystallinity">true</setting>
+
+
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
 
@@ -95,10 +96,6 @@ In order to verify this it is recommended to 3D print a 5cm x 1cm rod and to pri
       </hotend>
       <hotend id="BB 0.4">
         <setting key="hardware compatible">yes</setting>
-        <setting key="print temperature">240.0</setting>
-        <setting key="print cooling">0.0</setting>
-        <setting key="retraction amount">5.0</setting>
-        <setting key="retraction speed">25.0</setting>
       </hotend>
       <hotend id="BB 0.8">
         <setting key="hardware compatible">yes</setting>
@@ -113,6 +110,31 @@ In order to verify this it is recommended to 3D print a 5cm x 1cm rod and to pri
         <setting key="hardware recommended">yes</setting>
       </buildplate>
     </machine>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S3" />
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="BB 0.8">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="AA 0.25">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+        <hotend id="CC 0.6">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <buildplate id="Glass">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">yes</setting>
+      </buildplate>
+    </machine>       
 
   </settings>
 </fdmmaterial>
