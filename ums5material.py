@@ -192,7 +192,7 @@ elif options.delete:
             if not guid:
                 parser.error("No guid found in %s" % filename)
         else:
-            parser.error("Please provide material GUID or material filename that provides the GUID")
+            parser.error("Please provide material -g GUID or material filename that indirectly provides the GUID from the xml")
 
     DeleteMaterial(hostname, api_id, api_key, guid=guid)
     help = False
