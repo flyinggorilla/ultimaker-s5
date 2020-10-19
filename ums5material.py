@@ -1,7 +1,7 @@
 import requests
 from requests.auth import HTTPDigestAuth
 import os.path
-import yaml
+import yaml # pip install pyyaml
 import json
 import untangle
 
@@ -12,7 +12,8 @@ config = {"id" : "", "key" : "", "hostname" : "ultimaker"}
 
 try:
     config = yaml.load(open('ums5material.config.yaml'), Loader=yaml.FullLoader)
-except:
+except Exception as ex:
+    print(ex)
     print("WARNING: 'ums5material.config.yaml' not found.\nConsider using -s option to create .config.yaml file to store id, key, hostname and more....")
 
 api_id = config["id"]

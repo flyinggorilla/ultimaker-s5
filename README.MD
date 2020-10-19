@@ -1,4 +1,4 @@
-# Ultimaker S5 Materials Management Tool and FormFutura Materials
+# Ultimaker S5 and S3 Materials Management Tool and FormFutura Materials
 
 I am going to share my experiences with Ultimaker S5 and Ultimaker Material-station here. While a few FormFutura materials are now available in the Cura Marketplace for download, the issue is that it does not provide color information so that it can be assigned to a bay in material station. Furthermore do I use additional FormFutura materials alongside Ultimaker materials.
 
@@ -160,3 +160,11 @@ Posted FormFutura_PythonFlex_Generic.xml.fdm_material: 200 {"message": "Material
 ```
 
 Note that the .dfm_material definitions with color information are good for Cura import. For the Ultimaker S5 printer display you should generate a Generic profile that has a single space character as `<color> </color>` definition. So you dont need to send the color versions to the printer.
+
+
+# Formfutura cardboard spool adapter for Ultimaker S5 and S3
+FormFutura switched from plastic to cardboard spools recently. Great for environment, but problematic with Ultimaker spool holder, as the spools get stuck. This cardboard spool adapter for Ultimaker S3 and S5 will make it work again and uses little plastic. Printing two of these adapters solves the problem.
+
+![FormFutura cardboard spool adapter](formfuturaspooladapter.jpg)
+
+https://grabcad.com/library/formfutura-cardboard-spool-adapter-for-ultimaker-s3-and-s5-1

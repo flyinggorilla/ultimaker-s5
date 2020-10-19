@@ -64,6 +64,9 @@ Experience level: Beginner / Intermediate</adhesion_info>
     <setting key="print cooling">10</setting>
     <setting key="standby temperature">85</setting>
     <setting key="retraction amount">5</setting>        
+    <setting key="xy_offset">0.0</setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
+    <setting key="xy_offset_layer_0">-0.2</setting> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->
+    <setting key="hole_xy_offset">0.2</setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
    
 
     <machine>
