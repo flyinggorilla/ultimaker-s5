@@ -2,6 +2,18 @@
 
 I am going to share my experiences with Ultimaker S5 and Ultimaker Material-station here. While a few FormFutura materials are now available in the Cura Marketplace for download, the issue is that it does not provide color information so that it can be assigned to a bay in material station. Furthermore do I use additional FormFutura materials alongside Ultimaker materials.
 
+## S3 and S5 + Material Station ready profiles provided for:
+
+my favorites:
+* FormFutura ApolloX ASA (the one from Marketplace is not supporting material station properly)
+* FormFutura BVOH (works so far much better than PVA. Can be combined with many filaments, including ASA - my favorite material. Had so much of clogging issues with original Ultimaker PVA that i stopped it. Had then issues with FormFutura Helios PVA too however)
+
+also:
+* FormFutura PythonFlex
+* FormFutura Helios PVA (compatible with ASA)
+* FormFutura CrystalFlex
+* FormFutura HDglass PETG
+
 ## Materials-Station
 as of Cura 4.5 and S5 Firmware 5.5.12.20200226 there is no color information displayed with materials. this is ok for NFC based ultimaker material with color auto-detection, but not when manually assigning a 3rd party material to a material station bay.
 ![no color information](no_color_info.jpg)
