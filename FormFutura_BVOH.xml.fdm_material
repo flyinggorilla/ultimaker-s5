@@ -63,7 +63,7 @@
     <setting key="break position">-50</setting>
     <setting key="break speed">25</setting>
     <setting key="break temperature">170</setting>
-    <setting key="maximum park duration">216000</setting>
+    <setting key="maximum park duration">300</setting> <!-- seconds(?). "How long the material can be kept out of dry storage safely." -->
     <setting key="no load move factor">0.94</setting>
     <setting key="flush purge speed">0.5</setting>
     <setting key="end of filament purge speed">0.5</setting>
@@ -71,7 +71,9 @@
     <setting key="end of filament purge length">20</setting>
     <setting key="flow sensor detection margin">0.8</setting>
     <setting key="retract compensation">0</setting>
-    <setting key="material_crystallinity">true</setting>
+    <!-- <setting key="material_crystallinity">true</setting> --> <!--Revolutionary new polymer, Butendiol Vinyl Alcohol co-Polymer "BVOH"
+                                                                      Nichigo G-Polymer™ which can be used to freely control crystallinity and the cohesive power of the non-crystalline part is the next generation of vinyl alcohol resins.
+                                                                      In addition to outstanding transparency and solvent resistance, through the combination of “low crystallinity” with “high hydrogen bonding strength”, which are traits that are ordinarily in conflict, this new material realizes functions that had not been possible with conventional PVOH. These include low melting points, high stretching characteristics and high gas barrier performance, as well as low foaming, aqueous solution stability and emulsification performance. -->
 
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
