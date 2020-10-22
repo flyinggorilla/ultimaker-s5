@@ -64,7 +64,7 @@
     <setting key="break position">-50</setting> <!-- How far to retract the filament in order to break it cleanly -->
     <setting key="break speed">25</setting> <!-- [mm/s] The speed at which to retract the filament in order to break it cleanly -->
     <setting key="break temperature">105</setting> <!-- The temperature at which the filament is broken for a clean break -->
-    <setting key="maximum park duration">604800</setting> <!-- 604800=7 days?? "How long the material can be kept out of dry storage safely." -->
+    <setting key="maximum park duration">14400</setting> <!-- 14400 = 4 hours "How long the material can be kept out of dry storage safely." -->
     <setting key="no load move factor">0.98</setting> <!-- [default: 0.940860215] A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch -->
     <setting key="flush purge speed">0.5</setting> <!-- How fast to prime the material after switching to a different material. -->
     <setting key="flush purge length">50</setting> <!-- How much material to use to purge the previous material out of the nozzle (in length of filament) when switching to a different material -->
