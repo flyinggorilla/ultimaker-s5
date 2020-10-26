@@ -5,10 +5,17 @@ I am going to share my experiences with Ultimaker S5 and Ultimaker Material-stat
 ## S3 and S5 + Material Station ready profiles provided for:
 
 my favorites:
-* FormFutura ApolloX ASA (the one from Marketplace is not supporting material station properly)
-* FormFutura BVOH (works so far much better than PVA. Can be combined with many filaments, including ASA - my favorite material. Had so much of clogging issues with original Ultimaker PVA that i stopped it. Had then issues with FormFutura Helios PVA too however)
+#### __FormFutura ApolloX ASA__ UV and outdoor resistant mechanical matieral 
 
-also:
+There is a FormFutura ApolloX listed on the marketplace, but that one is STILL not  supporting material station properly, because it misses color and additional material profile settings. So choose this one and you should be fine.
+
+#### __FormFutura BVOH__ water soluble support material
+
+works so far much better than PVA. Prints easier, didnt clog so far my BB 0.4, dissolves much quicker than PVA in warm water. Can be combined with many filaments, including ASA - my favorite material. Had so much of clogging issues with original Ultimaker PVA that i stopped it. Had then issues with FormFutura Helios PVA too however
+
+![Formfutura ApolloX ASA and BVOH water soluble material](s5_materialstation_apollox_bvoh.jpg)
+
+additionally:
 * FormFutura PythonFlex
 * FormFutura Helios PVA (compatible with ASA)
 * FormFutura CrystalFlex

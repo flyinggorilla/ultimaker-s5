@@ -71,6 +71,7 @@
     <setting key="end of filament purge length">20</setting>
     <setting key="flow sensor detection margin">0.8</setting>
     <setting key="retract compensation">0</setting>
+    <setting key="support_pattern">gyroid</setting> <!-- Gyroid is permeable to fluides and allows faster dissolvment. The pattern of the support structures of the print. The different options available result in sturdy or easy to remove support.-->
     <!-- <setting key="material_crystallinity">true</setting> --> <!--Revolutionary new polymer, Butendiol Vinyl Alcohol co-Polymer "BVOH"
                                                                       Nichigo G-Polymer™ which can be used to freely control crystallinity and the cohesive power of the non-crystalline part is the next generation of vinyl alcohol resins.
                                                                       In addition to outstanding transparency and solvent resistance, through the combination of “low crystallinity” with “high hydrogen bonding strength”, which are traits that are ordinarily in conflict, this new material realizes functions that had not been possible with conventional PVOH. These include low melting points, high stretching characteristics and high gas barrier performance, as well as low foaming, aqueous solution stability and emulsification performance. -->
