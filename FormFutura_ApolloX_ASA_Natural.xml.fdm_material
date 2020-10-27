@@ -73,14 +73,10 @@
     <setting key="end of filament purge length">20</setting>
     <setting key="build volume temperature">44</setting> <!-- a setting of 42+ keeps AirManager more quiet -->   
     <setting key="surface energy">70</setting>
-    
-    <!-- <setting key="shrinkage percentage">0.9</setting>    DELETE not used anyway -->
-    <!-- NEW*************************-->
     <setting key="xy_offset">0.0</setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
     <setting key="xy_offset_layer_0">-0.2</setting> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->
     <setting key="hole_xy_offset">0.2</setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
     <setting key="fan speed">25.0</setting>
-    <!-- For material flow sensor -->
     <setting key="relative extrusion">1.0</setting>
     <setting key="flow sensor detection margin">0.8</setting>
     <setting key="retract compensation">0</setting>
@@ -88,6 +84,7 @@
     <setting key="standby temperature">85</setting>
     <setting key="retraction amount">5</setting>        
     <setting key="infill_pattern">quarter_cubic</setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
+    <setting key="alternate_extra_perimeter">true</setting> <!-- Prints an extra wall at every other layer. This way infill gets caught between these extra walls, resulting in stronger prints. -->
 
      
 
