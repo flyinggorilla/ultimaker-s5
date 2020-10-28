@@ -68,6 +68,8 @@ Experience level: Expert
     <setting key="build volume temperature">38</setting>    <!-- For material flow sensor -->
     <setting key="flow sensor detection margin">0.8</setting>
     <setting key="retract compensation">0</setting>    
+    <setting key="support_z_distance">0.0</setting> <!-- Distance from the top/bottom of the support structure to the print. This gap provides clearance to remove the supports after the model is printed. This value is rounded up to a multiple of the layer height.-->
+
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
       <hotend id="BB 0.4">

@@ -44,7 +44,7 @@
     <color_code>#FF0000</color_code>
     <compatible>True</compatible>
     <definition>fdmprinter</definition>
-    <version>23</version>
+    <version>24</version>
     <GUID>1403a419-2a22-4d6c-ad80-3ea3252d2496</GUID>
   </metadata>
   <properties>
@@ -67,26 +67,25 @@
     <setting key="break temperature">105</setting> <!-- The temperature at which the filament is broken for a clean break -->
     <setting key="maximum park duration">14400</setting> <!-- 14400 = 4 hours "How long the material can be kept out of dry storage safely." -->
     <setting key="no load move factor">0.98</setting> <!-- [default: 0.940860215] A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch -->
-    <setting key="flush purge speed">0.5</setting> <!-- How fast to prime the material after switching to a different material. -->
-    <setting key="flush purge length">50</setting> <!-- How much material to use to purge the previous material out of the nozzle (in length of filament) when switching to a different material -->
-    <setting key="end of filament purge speed">0.5</setting> <!-- How fast to prime the material after replacing an empty spool with a fresh spool of the same material-->
-    <setting key="end of filament purge length">20</setting>
+    <setting key="flush purge speed">1.0</setting> <!-- default 0.5mm/s: sHow fast to prime the material after switching to a different material. -->
+    <setting key="flush purge length">100</setting> <!-- default 50mm: How much material to use to purge the previous material out of the nozzle (in length of filament) when switching to a different material -->
+    <setting key="end of filament purge speed">0.5</setting> <!-- default: 0.5mm: How fast to prime the material after replacing an empty spool with a fresh spool of the same material-->
+    <setting key="end of filament purge length">20</setting> <!-- default: 20mm: "How much material to use to purge the previous material out of the nozzle (in length of filament) when replacing an empty spool with a fresh spool of the same material." -->
     <setting key="build volume temperature">44</setting> <!-- a setting of 42+ keeps AirManager more quiet -->   
     <setting key="surface energy">70</setting>
     <setting key="shrinkage percentage">0.9</setting>    
-    <!-- For material flow sensor -->
-    <setting key="relative extrusion">1.0</setting>
-    <setting key="flow sensor detection margin">0.8</setting>
-    <setting key="retract compensation">0</setting>
+    <setting key="relative extrusion">1.0</setting> <!-- For material flow sensor -->
+    <setting key="flow sensor detection margin">0.8</setting> <!-- For material flow sensor -->
+    <setting key="retract compensation">0</setting> <!-- For material flow sensor -->
     <setting key="print cooling">10</setting>
     <setting key="standby temperature">85</setting>
     <setting key="retraction amount">5</setting>        
-    <setting key="xy_offset">0.0</setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
-    <setting key="xy_offset_layer_0">-0.2</setting> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->
-    <setting key="hole_xy_offset">0.2</setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
-    <setting key="infill_pattern">quarter_cubic</setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
-    <setting key="alternate_extra_perimeter">true</setting> <!-- Prints an extra wall at every other layer. This way infill gets caught between these extra walls, resulting in stronger prints. -->
 
+    <cura:setting key="xy_offset">0.0</cura:setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
+    <cura:setting key="xy_offset_layer_0">-0.2</cura:setting> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->
+    <cura:setting key="hole_xy_offset">0.2</cura:setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
+    <cura:setting key="infill_pattern">quarter_cubic</cura:setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
+    <cura:setting key="alternate_extra_perimeter">yes</cura:setting> <!-- Prints an extra wall at every other layer. This way infill gets caught between these extra walls, resulting in stronger prints. -->
 
     <machine>
       <!--<machine_identifier manufacturer="Ultimaker B.V." product="ultimaker_s5" />-->

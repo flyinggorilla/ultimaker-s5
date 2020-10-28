@@ -11,7 +11,7 @@
     <GUID>eeb45bce-beb2-45d2-bd93-58de5bac4e81</GUID>
     <compatible>True</compatible>
     <color_code>#f5f2d1</color_code>
-    <version>1</version>
+    <version>3</version>
     <definition>fdmprinter</definition>
     <description>FormFutura's BVOH - Butenediol Vinyl Alcohol Co-polymer - 
         3D printer filament is an advanced water-soluble support material for 
@@ -49,30 +49,37 @@
     <diameter>2.85</diameter>
   </properties>
   <settings>
+
     <setting key="print temperature">215</setting>
     <setting key="standby temperature">130</setting>
     <setting key="heated bed temperature">80</setting>
     <setting key="build volume temperature">42</setting>
-    <setting key="relative extrusion">1.0</setting>
     <setting key="print cooling">0</setting>
-    <setting key="anti ooze retract position">-2</setting>
-    <setting key="anti ooze retract speed">15</setting>
-    <setting key="break preparation position">-16</setting>
-    <setting key="break preparation speed">2</setting>
-    <setting key="break preparation temperature">230</setting>
-    <setting key="break position">-50</setting>
-    <setting key="break speed">25</setting>
-    <setting key="break temperature">170</setting>
-    <setting key="maximum park duration">300</setting> <!-- seconds(?). "How long the material can be kept out of dry storage safely." -->
-    <setting key="no load move factor">0.94</setting>
-    <setting key="flush purge speed">0.5</setting>
-    <setting key="end of filament purge speed">0.5</setting>
-    <setting key="flush purge length">100</setting>
-    <setting key="end of filament purge length">20</setting>
-    <setting key="flow sensor detection margin">0.8</setting>
-    <setting key="retract compensation">0</setting>
-    <setting key="support_pattern">gyroid</setting> <!-- Gyroid is permeable to fluides and allows faster dissolvment. The pattern of the support structures of the print. The different options available result in sturdy or easy to remove support.-->
-    <!-- <setting key="material_crystallinity">true</setting> --> <!--Revolutionary new polymer, Butendiol Vinyl Alcohol co-Polymer "BVOH"
+    <setting key="retraction amount">2</setting> <!-- default 6.5mm: The length of material retracted during a retraction move. -->
+    <setting key="anti ooze retract position">-2</setting> <!-- default -4mm: "How far the material needs to be retracted before it stops oozing."-->
+    <setting key="anti ooze retract speed">10</setting> <!-- default 5mm/s: "How fast the material needs to be retracted during a filament switch to prevent oozing."-->
+    <setting key="break preparation position">-50</setting> <!-- How far the filament can be stretched before it breaks, while heated -->
+    <setting key="break preparation speed">25</setting> <!-- How fast the filament needs to be retracted just before breaking it off in a retraction [mm/s]-->
+    <setting key="break preparation temperature">230</setting> <!-- The temperature used to purge material, should be roughly equal to the highest possible printing temperature -->
+    <setting key="break position">-50</setting> <!-- How far to retract the filament in order to break it cleanly -->
+    <setting key="break speed">5</setting> <!-- default 2mm/s"How fast the filament needs to be retracted just before breaking it off in a retraction."-->
+    <setting key="break temperature">180</setting> <!-- The temperature at which the filament is broken for a clean break -->
+    <setting key="maximum park duration">300</setting> <!-- seconds. "How long the material can be kept out of dry storage safely." -->
+    <setting key="no load move factor">0.94</setting> <!-- This setting expresses the difference in the length of the filament when it's being compressed between the feeder and the nozzle chamber. Materials that compress more easily, such as TPU or Polypropylene, will have a lower factor than stiff materials such as PLA. -->
+    <setting key="flush purge speed">0.5</setting> <!-- How fast to prime the material after switching to a different material. -->
+    <setting key="end of filament purge speed">0.5</setting> <!-- default: 0.5mm: How fast to prime the material after replacing an empty spool with a fresh spool of the same material-->
+    <setting key="flush purge length">100</setting> <!-- How much material to use to purge the previous material out of the nozzle (in length of filament) when switching to a different material -->
+    <setting key="end of filament purge length">20</setting> --> <!-- default: 20mm: "How much material to use to purge the previous material out of the nozzle (in length of filament) when replacing an empty spool with a fresh spool of the same material." -->
+    <setting key="flow sensor detection margin">0.8</setting> <!-- For material flow sensor -->
+    <setting key="retract compensation">0</setting> <!-- For material flow sensor -->
+    <setting key="relative extrusion">1.0</setting> <!-- For material flow sensor -->
+
+
+    <!-- <cura:setting key="support_z_distance">0.0</cura:setting> --> <!-- Distance from the top/bottom of the support structure to the print. This gap provides clearance to remove the supports after the model is printed. This value is rounded up to a multiple of the layer height.-->
+    <!-- <cura:setting key="xy_offset_layer_0">-0.2</cura:setting> --> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->
+    <!-- <cura:setting key="hole_xy_offset">0.2</cura:setting> --> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
+    <!-- <cura:setting key="support_pattern">gyroid</cura:setting> --> <!-- Gyroid is permeable to fluides and allows faster dissolvment. The pattern of the support structures of the print. The different options available result in sturdy or easy to remove support.-->
+    <!-- <cura:setting key="material_crystallinity">true</cura:setting> --> <!--Revolutionary new polymer, Butendiol Vinyl Alcohol co-Polymer "BVOH"
                                                                       Nichigo G-Polymer™ which can be used to freely control crystallinity and the cohesive power of the non-crystalline part is the next generation of vinyl alcohol resins.
                                                                       In addition to outstanding transparency and solvent resistance, through the combination of “low crystallinity” with “high hydrogen bonding strength”, which are traits that are ordinarily in conflict, this new material realizes functions that had not been possible with conventional PVOH. These include low melting points, high stretching characteristics and high gas barrier performance, as well as low foaming, aqueous solution stability and emulsification performance. -->
 
