@@ -73,7 +73,7 @@
     <setting key="end of filament purge length">20</setting> <!-- default: 20mm: "How much material to use to purge the previous material out of the nozzle (in length of filament) when replacing an empty spool with a fresh spool of the same material." -->
     <setting key="build volume temperature">44</setting> <!-- a setting of 42+ keeps AirManager more quiet -->   
     <setting key="surface energy">70</setting>
-    <setting key="shrinkage percentage">0.9</setting>    
+    <setting key="shrinkage percentage">1.5</setting>    <!-- was 0.9, adjusted to 1.5 based on experience with large prints -->
     <setting key="relative extrusion">1.0</setting> <!-- For material flow sensor -->
     <setting key="flow sensor detection margin">0.8</setting> <!-- For material flow sensor -->
     <setting key="retract compensation">0</setting> <!-- For material flow sensor -->
@@ -83,8 +83,8 @@
 
     <cura:setting key="xy_offset">0.0</cura:setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
     <cura:setting key="xy_offset_layer_0">-0.2</cura:setting> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->
-    <cura:setting key="hole_xy_offset">0.2</cura:setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
-    <cura:setting key="infill_pattern">quarter_cubic</cura:setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
+    <cura:setting key="hole_xy_offset">0.1</cura:setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
+    <cura:setting key="infill_pattern">cubic_subdivision</cura:setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
     <cura:setting key="alternate_extra_perimeter">yes</cura:setting> <!-- Prints an extra wall at every other layer. This way infill gets caught between these extra walls, resulting in stronger prints. -->
 
     <machine>

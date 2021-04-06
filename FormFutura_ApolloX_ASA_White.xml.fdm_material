@@ -72,7 +72,7 @@
     <setting key="end of filament purge length">20</setting> <!-- default: 20mm: "How much material to use to purge the previous material out of the nozzle (in length of filament) when replacing an empty spool with a fresh spool of the same material." -->
     <setting key="build volume temperature">44</setting> <!-- a setting of 42+ keeps AirManager more quiet -->   
     <setting key="surface energy">70</setting>
-    <setting key="shrinkage percentage">0.9</setting>    
+    <setting key="shrinkage percentage">1.5</setting>    <!-- was 0.9, adjusted to 1.5 based on experience with large prints -->
     <setting key="relative extrusion">1.0</setting> <!-- For material flow sensor -->
     <setting key="flow sensor detection margin">0.8</setting> <!-- For material flow sensor -->
     <setting key="retract compensation">0</setting> <!-- For material flow sensor -->
