@@ -1,42 +1,59 @@
 <?xml version='1.0' encoding='utf-8'?>
 <fdmmaterial version="1.3" 
-  xmlns="http://www.ultimaker.com/material">
+  xmlns="http://www.ultimaker.com/material" xmlns:cura="http://www.ultimaker.com/cura">
   <metadata>
     <name>
       <brand>FormFutura</brand>
-      <material>ApolloX</material>
-      <color>Generic</color>
-      <label>ApolloX ASA</label>
+      <material>ApolloX BLUE</material>
+      <color>blue</color>
+      <label>ApolloX BLUE</label>
     </name>
-    <GUID>e2383de0-2913-4777-b0f3-a03767d96529</GUID>
+    <description>
+      ApolloX is a professional high-performance engineering filament, 
+      which is based on an uniquely industrial-grade modified 
+      ASA (Acrylonitrile Styrene Acrylate) compound. ApolloX has been 
+      modified to have great thermal stability, improved filament flowing 
+      behavior, zero-warping and flawless first- and interlayer adhesion 
+      allowing you to 3D print objects with an almost injection-molded 
+      precision. ApolloX is UV and weather resistant and by that ensuring 
+      great color stability – combined with high strength and heat 
+      resistant properties – which makes ApolloX a perfect engineering 
+      filament for outdoor and automotive applications.
+      Unique features
+      UV &amp; weather resistant
+      FDM/FFF-optimized
+      Warp-free printing
+      Optimized filament flowing behaviour, thermal stability, and inter-layer adhesion
+      Excellent adhesion to heated glass plate, Kapton tape, PET tape and Formfutura EasyPad
+      Greatly improved mechanical properties and strength
+      Extremely high printing precision
+      Printing with remarkable fine detail
+      (fg)
+    </description>
+    <adhesion_info>
+        Nozzle size: ≥ 0.15mm
+        Layer height: ≥ 0.1mm
+        Flow rate: ± 100%
+        Print temp: ± 235 - 255° C *
+        Print speed: Medium
+        Retraction: Yes ± 5mm
+        Heat bed: ± 80 - 90° C *
+        Fan speed: 0-25%
+        Experience level: Beginner / Intermediate
+    </adhesion_info>
+    <color_code>#0957d6</color_code>
     <compatible>True</compatible>
-    <color_code>#f5f2d1</color_code>
-    <version>24</version>
     <definition>fdmprinter</definition>
-    <description>ApolloX is a professional high-performance engineering filament, which is based on an uniquely industrial-grade modified ASA (Acrylonitrile Styrene Acrylate) compound. ApolloX has been modified to have great thermal stability, improved filament flowing behavior, zero-warping and flawless first- and interlayer adhesion allowing you to 3D print objects with an almost injection-molded precision. ApolloX is UV and weather resistant and by that ensuring great color stability – combined with high strength and heat resistant properties – which makes ApolloX a perfect engineering filament for outdoor and automotive applications.
-        Unique features UV &amp; weather resistant FDM/FFF-optimized
-        Warp-free printing Optimized filament flowing behaviour, thermal stability, and inter-layer adhesion
-        Excellent adhesion to heated glass plate, Kapton tape, PET tape and Formfutura EasyPad
-Greatly improved mechanical properties and strength
-Extremely high printing precision
-Printing with remarkable fine detail (fg)</description>
-    <adhesion_info>Nozzle size: ≥ 0.15mm
-Layer height: ≥ 0.1mm
-Flow rate: ± 100%
-Print temp: ± 235 - 255° C *
-Print speed: Medium
-Retraction: Yes ± 5mm
-Heat bed: ± 80 - 90° C *
-Fan speed: 0-25%
-Experience level: Beginner / Intermediate</adhesion_info>
+    <version>25</version>
+    <GUID>2ede401b-50b4-4308-b31c-1da9fd9cb129</GUID>
   </metadata>
   <properties>
+    <weight>750</weight>
     <density>1.11</density>
     <diameter>2.85</diameter>
-    <weight>750</weight>
   </properties>
   <settings>
-    <setting key="print temperature">245</setting>
+    <setting key="print temperature">250</setting> <!-- go high enough for better inter-layer-adhesion -->
     <setting key="heated bed temperature">90</setting>
     <setting key="adhesion tendency">0</setting>
     <setting key="relative extrusion">1.0</setting>
@@ -54,7 +71,7 @@ Experience level: Beginner / Intermediate</adhesion_info>
     <setting key="flush purge length">100</setting> <!-- default 50mm: How much material to use to purge the previous material out of the nozzle (in length of filament) when switching to a different material -->
     <setting key="end of filament purge speed">0.5</setting> <!-- default: 0.5mm: How fast to prime the material after replacing an empty spool with a fresh spool of the same material-->
     <setting key="end of filament purge length">20</setting> <!-- default: 20mm: "How much material to use to purge the previous material out of the nozzle (in length of filament) when replacing an empty spool with a fresh spool of the same material." -->
-    <setting key="build volume temperature">44</setting> <!-- a setting of 42+ keeps AirManager more quiet -->   
+    <setting key="build volume temperature">47</setting> <!-- a setting of 42+ keeps AirManager more quiet -->   
     <setting key="surface energy">70</setting>
     <setting key="shrinkage percentage">1.5</setting>    <!-- was 0.9, adjusted to 1.5 based on experience with large prints -->
     <setting key="relative extrusion">1.0</setting> <!-- For material flow sensor -->
@@ -66,14 +83,18 @@ Experience level: Beginner / Intermediate</adhesion_info>
 
     <cura:setting key="xy_offset">0.0</cura:setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
     <cura:setting key="xy_offset_layer_0">-0.2</cura:setting> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->
-    <cura:setting key="hole_xy_offset">0.2</cura:setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
-    <cura:setting key="infill_pattern">quarter_cubic</cura:setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
+    <cura:setting key="hole_xy_offset">0.1</cura:setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
+    <cura:setting key="infill_pattern">cubic_subdivision</cura:setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
     <cura:setting key="alternate_extra_perimeter">yes</cura:setting> <!-- Prints an extra wall at every other layer. This way infill gets caught between these extra walls, resulting in stronger prints. -->
 
     <machine>
+      <!--<machine_identifier manufacturer="Ultimaker B.V." product="ultimaker_s5" />-->
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
-      <hotend id="AA 0.8">
-        <setting key="hardware compatible">yes</setting>
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="BB 0.8">
+        <setting key="hardware compatible">no</setting>
       </hotend>
       <hotend id="AA 0.25">
         <setting key="hardware compatible">yes</setting>
@@ -81,22 +102,19 @@ Experience level: Beginner / Intermediate</adhesion_info>
       <hotend id="AA 0.4">
         <setting key="hardware compatible">yes</setting>
       </hotend>
+      <hotend id="AA 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
         <hotend id="CC 0.6">
         <setting key="hardware compatible">yes</setting>
       </hotend>
-      <hotend id="BB 0.4">
-        <setting key="hardware compatible">no</setting>
-      </hotend>
-      <hotend id="BB 0.8">
-        <setting key="hardware compatible">no</setting>
-      </hotend>
-      <buildplate id="Aluminum">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="hardware recommended">yes</setting>
-      </buildplate>
       <buildplate id="Glass">
         <setting key="hardware compatible">yes</setting>
         <setting key="hardware recommended">yes</setting>
+      </buildplate>
+      <buildplate id="Aluminum">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">no</setting>
       </buildplate>
     </machine>
     <machine>
@@ -123,7 +141,6 @@ Experience level: Beginner / Intermediate</adhesion_info>
         <setting key="hardware compatible">yes</setting>
         <setting key="hardware recommended">yes</setting>
       </buildplate>
-    </machine>       
-
+    </machine>    
   </settings>
 </fdmmaterial>
