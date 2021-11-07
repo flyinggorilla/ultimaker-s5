@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<fdmmaterial xmlns="http://www.ultimaker.com/material" xmlns:cura="http://www.ultimaker.com/cura" version="1.3">
+  <metadata>
+    <name>
+      <brand>colorFabb</brand>
+      <material>varioShore TPU</material>
+      <color>Black</color>
+      <label>Black varioShore TPU</label>
+    </name>
+    <version>1</version>
+    <GUID>b579a0d3-1177-428d-84d5-4fa16c57a3b6</GUID>
+    <color_code>#0e0e10</color_code>
+    <description>varioShore TPU allows users to vary the density of the material by adjusting temperature and material 
+    throughput (speed and layerheight). At temperatures between 200 and 250C the materials will start to expand to 
+    roughly 1.4-1.6 times its original volume. This means the material can be printed at low flow rates (60-70%), 
+    to compensate the active foaming, which in return gives very soft printed parts. Between 190-200C the material can be 
+    printed without foaming, resulting in different haptics and harder prints compared to foamed samples.</description>
+    <adhesion_info>Dimafix</adhesion_info>
+  </metadata>
+  <properties>
+    <density>1.25</density>
+    <diameter>2.85</diameter>
+    <weight>700</weight>
+  </properties>
+  <settings>
+    <setting key="anti ooze retract position">0</setting>
+    <setting key="anti ooze retract speed">25</setting>
+    <setting key="break preparation position">0</setting>
+    <setting key="break preparation speed">2</setting>
+    <setting key="break preparation temperature">223</setting>
+    <setting key="break position">-100</setting>
+    <setting key="break speed">25</setting>
+    <setting key="break temperature">195</setting>
+    <setting key="flush purge length">60</setting>
+    <setting key="maximum park duration">7200</setting>
+    <setting key="no load move factor">1.03</setting>
+    <setting key="print temperature">240</setting>
+    <setting key="print cooling">0</setting>
+    <setting key="heated bed temperature">80</setting>
+    <setting key="standby temperature">175</setting>
+    <setting key="adhesion tendency">3</setting>
+    <setting key="surface energy">100</setting>
+    <setting key="build volume temperature">47</setting> <!-- keep the fan quiet -->
+
+    <cura:setting key="material_flow">60</cura:setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
+    <cura:setting key="speed_print">25</cura:setting>
+    <cura:setting key="material_crystallinity">true</cura:setting> <!-- "Is this material the type that breaks off cleanly when heated (crystalline), or is it the type that produces long intertwined polymer chains (non-crystalline)?", -->
+    <cura:setting key="build_volume_temperature">47</cura:setting>
+    <cura:setting key="adhesion_type">skirt</cura:setting>
+
+    <cura:setting key="xy_offset">0.0</cura:setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
+    <cura:setting key="xy_offset_layer_0">-0.2</cura:setting> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->
+    <cura:setting key="hole_xy_offset">0.1</cura:setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
+    <cura:setting key="infill_pattern">cross_3d</cura:setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
+    <cura:setting key="alternate_extra_perimeter">yes</cura:setting> <!-- Prints an extra wall at every other layer. This way infill gets caught between these extra walls, resulting in stronger prints. -->
+    <machine>
+      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S3" />
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="BB 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="CC 0.6">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.25">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="AA 0.4">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="retraction speed">35</setting>
+      </hotend>
+      <hotend id="AA 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="BB 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="CC 0.6">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.25">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="AA 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+    </machine>
+  </settings>
+</fdmmaterial>
