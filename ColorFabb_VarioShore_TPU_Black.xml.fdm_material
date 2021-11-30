@@ -43,6 +43,7 @@
     <setting key="build volume temperature">47</setting> <!-- keep the fan quiet -->
 
     <cura:setting key="material_flow">60</cura:setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
+    <cura:setting key="material_flow_layer_0">60.0</cura:setting> <!-- Initial Layer Flow. -->
     <cura:setting key="speed_print">30</cura:setting>
     <cura:setting key="layer_height">0.2</cura:setting>
     <cura:setting key="material_crystallinity">true</cura:setting> <!-- "Is this material the type that breaks off cleanly when heated (crystalline), or is it the type that produces long intertwined polymer chains (non-crystalline)?", -->
@@ -96,6 +97,8 @@
       </hotend>
       <hotend id="AA 0.8">
         <setting key="hardware compatible">yes</setting>
+        <cura:setting key="material_flow">55</cura:setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
+        <cura:setting key="material_flow_layer_0">55.0</cura:setting> <!-- Initial Layer Flow. -->
       </hotend>
     </machine>
   </settings>
