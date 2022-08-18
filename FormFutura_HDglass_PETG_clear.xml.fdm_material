@@ -58,7 +58,7 @@
     <setting key="end of filament purge speed">1</setting>
     <setting key="flush purge length">60</setting>
     <setting key="end of filament purge length">20</setting>
-    <setting key="build volume temperature">42</setting>    <!-- For material flow sensor -->
+    <setting key="build volume temperature">47</setting>    <!-- For material flow sensor -->
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
       <hotend id="BB 0.8">

@@ -41,6 +41,8 @@
     <setting key="adhesion tendency">3</setting>
     <setting key="surface energy">100</setting>
     <setting key="build volume temperature">47</setting> <!-- keep the fan quiet -->
+    <setting key="retraction amount">10.0</setting>
+
 
     <cura:setting key="material_flow">60</cura:setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
     <cura:setting key="material_flow_layer_0">60.0</cura:setting> <!-- Initial Layer Flow. -->
@@ -50,11 +52,13 @@
     <cura:setting key="build_volume_temperature">47</cura:setting>
     <cura:setting key="adhesion_type">skirt</cura:setting>
 
-    <cura:setting key="xy_offset">0.0</cura:setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
-    <cura:setting key="xy_offset_layer_0">-0.2</cura:setting> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->
+    <cura:setting key="xy_offset">-0.25</cura:setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
+    <cura:setting key="xy_offset_layer_0">-0.25</cura:setting> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->
     <cura:setting key="hole_xy_offset">0.1</cura:setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
     <cura:setting key="infill_pattern">cross_3d</cura:setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
     <cura:setting key="alternate_extra_perimeter">yes</cura:setting> <!-- Prints an extra wall at every other layer. This way infill gets caught between these extra walls, resulting in stronger prints. -->
+    <cura:setting key="material_flow">55</cura:setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
+    <cura:setting key="material_flow_layer_0">55.0</cura:setting> <!-- Initial Layer Flow. -->
     
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S3" />
@@ -72,7 +76,7 @@
       </hotend>
       <hotend id="AA 0.4">
         <setting key="hardware compatible">yes</setting>
-        <setting key="retraction speed">35</setting>
+        <setting key="retraction speed">45</setting>
       </hotend>
       <hotend id="AA 0.8">
         <setting key="hardware compatible">yes</setting>
@@ -94,11 +98,10 @@
       </hotend>
       <hotend id="AA 0.4">
         <setting key="hardware compatible">yes</setting>
+        <setting key="retraction speed">45</setting>
       </hotend>
       <hotend id="AA 0.8">
         <setting key="hardware compatible">yes</setting>
-        <cura:setting key="material_flow">55</cura:setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
-        <cura:setting key="material_flow_layer_0">55.0</cura:setting> <!-- Initial Layer Flow. -->
       </hotend>
     </machine>
   </settings>
