@@ -32,12 +32,12 @@
         PVA molds
     </description>
     <adhesion_info>General printing guidelines *
-        Nozzle side: ≥ 0.15mm
+        Nozzle size: ≥ 0.15mm
         layer height: ≥ 0.1mm
         Experience level: Expert
-        Print temp: ± 200 - 230° C
+        Print temp:  220°C ±10°C
         Fan speed: 0 - 30%
-        Heat bed: ± 65 - 75° C
+        Heat bed: >60° C
         Enclosure needed: No
         *) Above displayed settings are meant as guidance to find your optimal print settings. These ranges in settings should work for most printers, but please do feel free to experiment outside these parameters if you think it is suitable for your printer. There are a lot of different type of printers, hot-ends, and printer offset that it is extremely difficult to give an overall one-size-fits-all setting.
         *) Do not exceed a printing temperature of 230˚C for a prolonged period of time.
@@ -50,14 +50,16 @@
   </properties>
   <settings>
 
-    <setting key="print temperature">215</setting>
+    <setting key="print temperature">220</setting>
     <setting key="standby temperature">130</setting>
-    <setting key="heated bed temperature">80</setting>
-    <setting key="build volume temperature">42</setting>
+    <setting key="heated bed temperature">90</setting>
+    <setting key="build volume temperature">47</setting>
     <setting key="print cooling">0</setting>
-    <setting key="retraction amount">2</setting> <!-- default 6.5mm: The length of material retracted during a retraction move. -->
+    <setting key="print speed">30</setting> <!-- max 35mm/s for BVOH, to reduce blockage risk go slower -->
+    <setting key="retraction amount">5</setting> <!-- default 6.5mm: The length of material retracted during a retraction move. -->
+    <setting key="retraction speed">20</setting> <!-- default 25mm/s: The speed at which the filament is retracted and primed during a retraction move.. -->
     <setting key="anti ooze retract position">-2</setting> <!-- default -4mm: "How far the material needs to be retracted before it stops oozing."-->
-    <setting key="anti ooze retract speed">10</setting> <!-- default 5mm/s: "How fast the material needs to be retracted during a filament switch to prevent oozing."-->
+    <setting key="anti ooze retract speed">5</setting> <!-- default 5mm/s: "How fast the material needs to be retracted during a filament switch to prevent oozing."-->
     <setting key="break preparation position">-50</setting> <!-- How far the filament can be stretched before it breaks, while heated -->
     <setting key="break preparation speed">25</setting> <!-- How fast the filament needs to be retracted just before breaking it off in a retraction [mm/s]-->
     <setting key="break preparation temperature">230</setting> <!-- The temperature used to purge material, should be roughly equal to the highest possible printing temperature -->
@@ -73,6 +75,7 @@
     <setting key="flow sensor detection margin">0.8</setting> <!-- For material flow sensor -->
     <setting key="retract compensation">0</setting> <!-- For material flow sensor -->
     <setting key="relative extrusion">1.0</setting> <!-- For material flow sensor -->
+    <setting key="support_z_distance">0.0</setting> <!-- Distance from the top/bottom of the support structure to the print. This gap provides clearance to remove the supports after the model is printed. This value is rounded up to a multiple of the layer height.-->
 
 
     <!-- <cura:setting key="support_z_distance">0.0</cura:setting> --> <!-- Distance from the top/bottom of the support structure to the print. This gap provides clearance to remove the supports after the model is printed. This value is rounded up to a multiple of the layer height.-->
