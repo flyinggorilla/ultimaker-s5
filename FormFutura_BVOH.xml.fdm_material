@@ -51,7 +51,7 @@
   <settings>
 
     <setting key="print temperature">220</setting>
-    <setting key="standby temperature">130</setting>
+    <setting key="standby temperature">80</setting>
     <setting key="heated bed temperature">90</setting>
     <setting key="build volume temperature">47</setting>
     <setting key="print cooling">0</setting>
