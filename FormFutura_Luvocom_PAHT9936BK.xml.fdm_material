@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='utf-8'?>
+<fdmmaterial version="1.3" 
+  xmlns="http://www.ultimaker.com/material" xmlns:cura="http://www.ultimaker.com/cura">
+  <metadata>
+    <name>
+      <brand>FormFutura</brand>
+      <material>Luvocom PAHT 9936</material>
+      <color>black</color>
+      <label>Luvocom PAHT 9936BK</label>
+    </name>
+    <description>
+FormFutura Luvocom 3F PAHT 9936 BK is an  unreinforced and high-temperature resistant polyamide 6 (PA6) based 3D printer filament that is engineered for industrial applications. This 3D printing filament features the strength and toughness of pure PA6 nylon without sacrificing any of its printability. Luvocom 3F PAHT 9936 BK filament exhibits a 50% lower water uptake at a four times slower rate compared to standard PA6 nylon filaments and is optimized for 3D printing strong parts with a high quality surface appearance. 
+Luvocom 3F PAHT 9936 BK is temperature-resistant up to 160 °C and has an outstanding mechanical performance, making it a perfect PA6 filament for 3D printing functional prototypes and end-use parts with an extremely high dimensional accuracy.
+Key features
+* Lehvoss Luvocom 3F PAHT 9936 BK inside
+* Unreinforced PA6 filament with high strength and toughness 
+* Temperature resistant up to 160 °C (200h)
+* 50% reduced water uptake at a four times slower rate compared to other PA6 filaments
+* Tensile strength up to 78 MPa
+* 3D prints with high dimensional accuracy and increased layer adhesion
+* Good electrical properties
+Applications
+* Dynamically-stressed parts
+* Functional prototypes
+* Jigs, tools, and fixtures
+* End-use parts 
+    </description>
+    <adhesion_info>
+        Nozzle size: ≥ 0.15mm
+        Layer height: ≥ 0.1mm
+        Flow rate: ± 100%
+        Print temp: ± 250 - 280° C *
+        Print speed: 40-60mm/s
+        Retraction: Yes ± 5mm
+        Heat bed: ± 80 - 90° C *
+        Fan speed: 0-25%
+        Print bed adhesion: DimaFix or similar
+        Experience level: Intermediate
+    </adhesion_info>
+    <color_code>#0A0A0A</color_code>
+    <compatible>True</compatible>
+    <definition>fdmprinter</definition>
+    <version>1</version>
+    <GUID>bc8c77fb-1e5f-4b0e-81b1-25e8008b1ccc</GUID>
+  </metadata>
+  <properties>
+    <weight>500</weight>
+    <density>1.25</density>
+    <diameter>2.85</diameter>
+  </properties>
+  <settings>
+    <setting key="print temperature">275</setting> <!-- go high enough for better inter-layer-adhesion -->
+    <setting key="heated bed temperature">90</setting>
+    <setting key="adhesion tendency">2</setting> <!-- taken from luvocoms marketplace profile -->
+    <setting key="relative extrusion">1.0</setting>
+    <setting key="anti ooze retract position">-4</setting>
+    <setting key="anti ooze retract speed">5</setting>
+    <setting key="break preparation position">-16</setting> <!-- How far the filament can be stretched before it breaks, while heated -->
+    <setting key="break preparation speed">2</setting> <!-- How fast the filament needs to be retracted just before breaking it off in a retraction [mm/s]-->
+    <setting key="break preparation temperature">280</setting> <!-- The temperature used to purge material, should be roughly equal to the highest possible printing temperature -->
+    <setting key="break position">-50</setting> <!-- How far to retract the filament in order to break it cleanly -->
+    <setting key="break speed">25</setting> <!-- [mm/s] The speed at which to retract the filament in order to break it cleanly -->
+    <setting key="break temperature">105</setting> <!-- The temperature at which the filament is broken for a clean break -->
+    <setting key="maximum park duration">14400</setting> <!-- 14400 = 4 hours "How long the material can be kept out of dry storage safely." -->
+    <setting key="no load move factor">0.98</setting> <!-- [default: 0.940860215] A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch -->
+    <setting key="flush purge speed">1.0</setting> <!-- default 0.5mm/s: sHow fast to prime the material after switching to a different material. -->
+    <setting key="flush purge length">100</setting> <!-- default 50mm: How much material to use to purge the previous material out of the nozzle (in length of filament) when switching to a different material -->
+    <setting key="end of filament purge speed">0.5</setting> <!-- default: 0.5mm: How fast to prime the material after replacing an empty spool with a fresh spool of the same material-->
+    <setting key="end of filament purge length">20</setting> <!-- default: 20mm: "How much material to use to purge the previous material out of the nozzle (in length of filament) when replacing an empty spool with a fresh spool of the same material." -->
+    <setting key="build volume temperature">47</setting> <!-- a setting of 42+ keeps AirManager more quiet -->   
+    <setting key="surface energy">100</setting> <!-- taken from luvocoms marketplace profile -->
+    <setting key="shrinkage percentage">1.5</setting>    <!-- was 0.9, adjusted to 1.5 based on experience with large prints -->
+    <setting key="relative extrusion">1.0</setting> <!-- For material flow sensor -->
+    <setting key="flow sensor detection margin">0.8</setting> <!-- For material flow sensor -->
+    <setting key="retract compensation">0</setting> <!-- For material flow sensor -->
+    <setting key="print cooling">10</setting>
+    <setting key="standby temperature">130</setting>
+    <setting key="retraction amount">8</setting>        
+
+    <cura:setting key="xy_offset">0.0</cura:setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
+    <cura:setting key="xy_offset_layer_0">-0.2</cura:setting> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->
+    <cura:setting key="hole_xy_offset">0.1</cura:setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
+    <cura:setting key="infill_pattern">cubic_subdivision</cura:setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
+    <cura:setting key="alternate_extra_perimeter">yes</cura:setting> <!-- Prints an extra wall at every other layer. This way infill gets caught between these extra walls, resulting in stronger prints. -->
+
+    <machine>
+      <!--<machine_identifier manufacturer="Ultimaker B.V." product="ultimaker_s5" />-->
+      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="BB 0.8">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="AA 0.25">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+        <hotend id="CC 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="CC 0.6">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <buildplate id="Glass">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">yes</setting>
+      </buildplate>
+      <buildplate id="Aluminum">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">no</setting>
+      </buildplate>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S3" />
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="BB 0.8">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="AA 0.25">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="CC 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="CC 0.6">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <buildplate id="Glass">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">yes</setting>
+      </buildplate>
+    </machine>    
+  </settings>
+</fdmmaterial>
