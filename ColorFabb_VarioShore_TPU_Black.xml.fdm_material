@@ -27,13 +27,13 @@
     <setting key="anti ooze retract speed">25</setting>
     <setting key="break preparation position">0</setting>
     <setting key="break preparation speed">2</setting>
-    <setting key="break preparation temperature">223</setting>
-    <setting key="break position">-100</setting>
-    <setting key="break speed">25</setting>
-    <setting key="break temperature">195</setting>
+    <setting key="break preparation temperature">223</setting> <!-- The temperature used to purge material, should be roughly equal to the highest possible printing temperature -->
+    <setting key="break position">-100</setting> <!-- How far to retract the filament in order to break it cleanly -->
+    <setting key="break speed">25</setting> <!-- [mm/s] The speed at which to retract the filament in order to break it cleanly -->
+    <setting key="break temperature">195</setting> <!-- The temperature at which the filament is broken for a clean break -->
     <setting key="flush purge length">60</setting>
-    <setting key="maximum park duration">7200</setting>
-    <setting key="no load move factor">1.03</setting>
+    <setting key="maximum park duration">7200</setting> <!-- 7200 = 2 hours "How long the material can be kept out of dry storage safely." -->
+    <setting key="no load move factor">1.02</setting>  <!-- [default: 0.940860215] A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch -->
     <setting key="print temperature">245</setting>
     <setting key="print cooling">0</setting>
     <setting key="heated bed temperature">80</setting>
@@ -52,13 +52,11 @@
     <cura:setting key="build_volume_temperature">47</cura:setting>
     <cura:setting key="adhesion_type">skirt</cura:setting>
 
-    <cura:setting key="xy_offset">-0.25</cura:setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
+    <cura:setting key="xy_offset">0.0</cura:setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
     <cura:setting key="xy_offset_layer_0">-0.25</cura:setting> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->
     <cura:setting key="hole_xy_offset">0.1</cura:setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
     <cura:setting key="infill_pattern">cross_3d</cura:setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
     <cura:setting key="alternate_extra_perimeter">yes</cura:setting> <!-- Prints an extra wall at every other layer. This way infill gets caught between these extra walls, resulting in stronger prints. -->
-    <cura:setting key="material_flow">55</cura:setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
-    <cura:setting key="material_flow_layer_0">55.0</cura:setting> <!-- Initial Layer Flow. -->
     
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S3" />
