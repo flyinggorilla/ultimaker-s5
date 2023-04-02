@@ -67,7 +67,7 @@ Matte surface finish
     <setting key="relative extrusion">1.0</setting> <!-- For material flow sensor -->
     <setting key="flow sensor detection margin">0.8</setting> <!-- For material flow sensor -->
     <setting key="retract compensation">0</setting> <!-- For material flow sensor -->
-    <setting key="print cooling">10</setting>
+    <setting key="print cooling">100</setting>
     <setting key="standby temperature">85</setting>
     <setting key="retraction amount">5</setting>        
 
