@@ -42,6 +42,8 @@
     <setting key="surface energy">100</setting>
     <setting key="build volume temperature">47</setting> <!-- keep the fan quiet -->
     <setting key="retraction amount">10.0</setting>
+    <setting key="retraction speed">45</setting> <!-- The speed at which the filament is retracted and primed during a retraction move.-->
+    <setting key="retraction amount">8</setting> <!-- default 6.5 [mm] ; The length of material retracted during a retraction move.-->  
 
 
     <cura:setting key="material_flow">60</cura:setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
