@@ -49,8 +49,8 @@ Applications
     <diameter>2.85</diameter>
   </properties>
   <settings>
-    <setting key="print temperature">275</setting> <!-- go high enough for better inter-layer-adhesion -->
-    <setting key="heated bed temperature">90</setting>
+    <setting key="print temperature">265</setting> <!-- go high enough for better inter-layer-adhesion -->
+    <setting key="heated bed temperature">80</setting>
     <setting key="adhesion tendency">2</setting> <!-- taken from luvocoms marketplace profile -->
     <setting key="break preparation position">-16</setting> <!-- How far the filament can be stretched before it breaks, while heated -->
     <setting key="break preparation speed">2</setting> <!-- How fast the filament needs to be retracted just before breaking it off in a retraction [mm/s]-->
@@ -74,8 +74,7 @@ Applications
     <setting key="retraction amount">8</setting> <!-- default 6.5 [mm] ; The length of material retracted during a retraction move.-->  
     <setting key="anti ooze retract position">-8</setting> <!-- default: -4 [mm]; How far the material needs to be retracted before it stops oozing.  -->
     <setting key="anti ooze retract speed">6</setting> <!-- default 5 [mm/s] ; How fast the material needs to be retracted during a filament switch to prevent oozing. -->
-
-    <setting key="print cooling">10</setting>
+    <setting key="print cooling">40</setting>
     <setting key="standby temperature">175</setting>
 
     <cura:setting key="xy_offset">0.0</cura:setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
@@ -105,6 +104,10 @@ Applications
         <setting key="hardware compatible">yes</setting>
         <cura:setting key="material_flow">95</cura:setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
         <cura:setting key="line_width">0.68</cura:setting> <!-- Width of a single line. Generally, the width of each line should correspond to the width of the nozzle. However, slightly reducing this value could produce better prints.. -->
+        <setting key="material_flow">95</setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
+        <setting key="line_width">0.68</setting> <!-- Width of a single line. Generally, the width of each line should correspond to the width of the nozzle. However, slightly reducing this value could produce better prints.. -->
+        <setting key="retraction speed">45</setting>
+        <setting key="print temperature">275.0</setting>
       </hotend>
         <hotend id="CC 0.4">
         <setting key="hardware compatible">yes</setting>
