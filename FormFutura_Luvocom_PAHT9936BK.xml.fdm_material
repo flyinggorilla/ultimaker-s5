@@ -49,7 +49,7 @@ Applications
     <diameter>2.85</diameter>
   </properties>
   <settings>
-    <setting key="print temperature">265</setting> <!-- go high enough for better inter-layer-adhesion -->
+    <setting key="print temperature">255</setting> <!-- go high enough for better inter-layer-adhesion -->
     <setting key="heated bed temperature">80</setting>
     <setting key="adhesion tendency">2</setting> <!-- taken from luvocoms marketplace profile -->
     <setting key="break preparation position">-16</setting> <!-- How far the filament can be stretched before it breaks, while heated -->
@@ -70,7 +70,7 @@ Applications
     <setting key="relative extrusion">1.0</setting> <!-- For material flow sensor -->
     <setting key="flow sensor detection margin">0.8</setting> <!-- For material flow sensor -->
     <setting key="retract compensation">0</setting> <!-- For material flow sensor -->
-    <setting key="retraction speed">25</setting> <!-- The speed at which the filament is retracted and primed during a retraction move.-->
+    <setting key="retraction speed">40</setting> <!-- The speed at which the filament is retracted and primed during a retraction move.-->
     <setting key="retraction amount">8</setting> <!-- default 6.5 [mm] ; The length of material retracted during a retraction move.-->  
     <setting key="anti ooze retract position">-8</setting> <!-- default: -4 [mm]; How far the material needs to be retracted before it stops oozing.  -->
     <setting key="anti ooze retract speed">6</setting> <!-- default 5 [mm/s] ; How fast the material needs to be retracted during a filament switch to prevent oozing. -->
@@ -99,6 +99,9 @@ Applications
       </hotend>
       <hotend id="AA 0.4">
         <setting key="hardware compatible">yes</setting>
+        <setting key="retraction speed">45</setting>
+        <setting key="retraction amount">8</setting> <!-- default 6.5 [mm] ; The length of material retracted during a retraction move.-->  
+        <setting key="material_flow">96</setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
       </hotend>
       <hotend id="AA 0.8">
         <setting key="hardware compatible">yes</setting>
@@ -106,8 +109,9 @@ Applications
         <cura:setting key="line_width">0.68</cura:setting> <!-- Width of a single line. Generally, the width of each line should correspond to the width of the nozzle. However, slightly reducing this value could produce better prints.. -->
         <setting key="material_flow">95</setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
         <setting key="line_width">0.68</setting> <!-- Width of a single line. Generally, the width of each line should correspond to the width of the nozzle. However, slightly reducing this value could produce better prints.. -->
-        <setting key="retraction speed">45</setting>
-        <setting key="print temperature">275.0</setting>
+        <setting key="retraction speed">50</setting> <!-- higher speed due to larger nozzle -->
+        <setting key="retraction amount">10</setting> <!-- default 6.5 [mm] ; The length of material retracted during a retraction move.-->  
+        <setting key="print temperature">255.0</setting>
       </hotend>
         <hotend id="CC 0.4">
         <setting key="hardware compatible">yes</setting>
