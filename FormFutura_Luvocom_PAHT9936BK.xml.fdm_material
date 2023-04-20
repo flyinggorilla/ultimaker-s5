@@ -72,7 +72,7 @@ Applications
     <setting key="retract compensation">0</setting> <!-- For material flow sensor -->
     <setting key="retraction speed">40</setting> <!-- The speed at which the filament is retracted and primed during a retraction move.-->
     <setting key="retraction amount">8</setting> <!-- default 6.5 [mm] ; The length of material retracted during a retraction move.-->  
-    <setting key="anti ooze retract position">-8</setting> <!-- default: -4 [mm]; How far the material needs to be retracted before it stops oozing.  -->
+    <setting key="anti ooze retract position">-10</setting> <!-- default: -4 [mm]; How far the material needs to be retracted before it stops oozing.  -->
     <setting key="anti ooze retract speed">6</setting> <!-- default 5 [mm/s] ; How fast the material needs to be retracted during a filament switch to prevent oozing. -->
     <setting key="print cooling">40</setting>
     <setting key="standby temperature">175</setting>
@@ -82,6 +82,7 @@ Applications
     <cura:setting key="hole_xy_offset">0.1</cura:setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
     <cura:setting key="infill_pattern">cubic_subdivision</cura:setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
     <cura:setting key="alternate_extra_perimeter">yes</cura:setting> <!-- Prints an extra wall at every other layer. This way infill gets caught between these extra walls, resulting in stronger prints. -->
+    <cura:setting key="adhesion_type">skirt</cura:setting> <!-- when used with dimafix, there is perfect adhesion, so skirt is perfectly enough  -->
 
     <machine>
       <!--<machine_identifier manufacturer="Ultimaker B.V." product="ultimaker_s5" />-->
@@ -109,7 +110,7 @@ Applications
         <cura:setting key="line_width">0.68</cura:setting> <!-- Width of a single line. Generally, the width of each line should correspond to the width of the nozzle. However, slightly reducing this value could produce better prints.. -->
         <setting key="material_flow">95</setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
         <setting key="line_width">0.68</setting> <!-- Width of a single line. Generally, the width of each line should correspond to the width of the nozzle. However, slightly reducing this value could produce better prints.. -->
-        <setting key="retraction speed">50</setting> <!-- higher speed due to larger nozzle -->
+        <setting key="retraction speed">45</setting> <!-- higher speed due to larger nozzle -->
         <setting key="retraction amount">10</setting> <!-- default 6.5 [mm] ; The length of material retracted during a retraction move.-->  
         <setting key="print temperature">255.0</setting>
       </hotend>
