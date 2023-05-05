@@ -28,13 +28,12 @@ ApolloX prints as easy as PLA, but is much more robust and perfectly suited for 
 * The marketplace delivered ApolloX profiles are still as of v2.0.0 only providing the bare minimum, and have not been tuned for colors, material station, robustness, dimensional stability and more.
 These profiles here are tuned for practical-use parts, with higher temperature for higher layer adhesion, and dimensional correctness also for larger prints. It is still super easy to print with Dimafix (or similar) in place.
 
+![Formfutura ApolloX ASA and BVOH water soluble material](s5_materialstation_apollox_bvoh.jpg)
 
 
 ## __FormFutura BVOH__ water soluble support material
 
 Forget PVA, BVOH is so much . I had only troubles works so far much better than PVA. Prints easier, didnt clog so far my BB 0.4, dissolves much quicker than PVA in warm water. Can be combined with many filaments, including ASA - my favorite material. Had so much of clogging issues with original Ultimaker PVA that i stopped it. Had then issues with FormFutura Helios PVA too however
-
-![Formfutura ApolloX ASA and BVOH water soluble material](s5_materialstation_apollox_bvoh.jpg)
 
 
 # Formfutura cardboard spool adapter for Ultimaker S5 and S3
