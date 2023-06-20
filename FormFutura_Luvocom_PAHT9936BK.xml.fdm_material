@@ -33,7 +33,7 @@ Applications
         Print speed: 40-60mm/s
         Retraction: Yes ± 5mm
         Heat bed: ± 80 - 90° C *
-        Fan speed: 0-25%
+        Fan speed: OFF (otherwise stringing may occur)
         Print bed adhesion: DimaFix or similar
         Experience level: Intermediate
     </adhesion_info>
@@ -49,16 +49,20 @@ Applications
     <diameter>2.85</diameter>
   </properties>
   <settings>
-    <setting key="print temperature">255</setting> <!-- go high enough for better inter-layer-adhesion -->
+    <setting key="print temperature">265</setting> <!-- go high enough for better inter-layer-adhesion -->
     <setting key="heated bed temperature">80</setting>
     <setting key="adhesion tendency">2</setting> <!-- taken from luvocoms marketplace profile -->
     <setting key="build volume temperature">47</setting> <!-- a setting of 42+ keeps AirManager more quiet -->   
     <setting key="surface energy">100</setting> <!-- taken from luvocoms marketplace profile -->
-    <setting key="shrinkage percentage">0.9</setting>    <!-- was 0.9, adjusted to 1.5 based on experience with large prints -->
-    <setting key="retraction speed">30</setting> <!-- The speed at which the filament is retracted and primed during a retraction move.-->
-    <setting key="retraction amount">8</setting> <!-- default 6.5 [mm] ; The length of material retracted during a retraction move.-->  
-    <setting key="print cooling">40</setting>
+    <setting key="shrinkage percentage">0.9</setting>    <!-- default of 0.9 -->
+    <setting key="retraction speed">35</setting> <!-- The speed at which the filament is retracted and primed during a retraction move.-->
+    <setting key="retraction amount">6.5</setting> <!-- default 6.5 [mm] ; The length of material retracted during a retraction move.-->  
+    <setting key="print cooling">0</setting> <!-- turn fans off, because the fan can cause strings -->
     <setting key="standby temperature">175</setting>
+    <setting key="maximum park duration">600</setting> <!-- 600sec = 10min "How long the material can be kept out of dry storage safely." -->
+    <setting key="material_flow">97</setting> <!-- avoid over-extrusion: Flow compensation: the amount of material extruded is multiplied by this value. -->
+    <cura:setting key="speed_print">60.0</cura:setting> <!-- default 60.0 [mm/s] ; The speed at which the print head moves while printing. -->
+
 
     <setting key="relative extrusion">1.0</setting> <!-- For material flow sensor -->
     <setting key="flow sensor detection margin">0.8</setting> <!-- For material flow sensor -->
@@ -67,9 +71,23 @@ Applications
     <cura:setting key="xy_offset">0.0</cura:setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
     <cura:setting key="xy_offset_layer_0">-0.2</cura:setting> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->
     <cura:setting key="hole_xy_offset">0.1</cura:setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
-    <cura:setting key="infill_pattern">cubic_subdivision</cura:setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
+    <cura:setting key="infill_pattern">cubicsubdiv</cura:setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
     <cura:setting key="alternate_extra_perimeter">yes</cura:setting> <!-- Prints an extra wall at every other layer. This way infill gets caught between these extra walls, resulting in stronger prints. -->
     <cura:setting key="adhesion_type">skirt</cura:setting> <!-- when used with dimafix, there is perfect adhesion, so skirt is perfectly enough  -->
+
+    <cura:setting key="infill_sparse_density">30</cura:setting> <!-- default 20 [%] ; The density of the infill material. --> 
+    <cura:setting key="support_infill_rate">20</cura:setting> <!-- default 20 [%] ; The density of the support infill material. --> 
+    <cura:setting key="wall_thickness">1.6</cura:setting> <!-- default 1.6 [mm] ; The thickness of the walls of the print. -->
+    <cura:setting key="infill_pattern">cubicsubdiv</cura:setting> <!-- Cubic subdivision infill pattern for strong mechanical parts -->
+    <cura:setting key="alternate_extra_perimeter">yes</cura:setting> <!-- Prints an extra wall at every other layer. This way infill gets caught between these extra walls, resulting in stronger prints. -->
+    <cura:setting key="adhesion_type">skirt</cura:setting> <!-- when used with dimafix, there is perfect adhesion, so skirt is perfectly enough  -->
+    <cura:setting key="material_print_temperature">265.0</cura:setting> <!-- default 265.0 [°C] ; The temperature at which the material is extruded. -->
+    <cura:setting key="retraction_combing_max_distance">500.0</cura:setting> <!-- default 15 [mm] - set extremely high for drastically reducing retraction time; The maximum distance the nozzle can travel without extruding material when combing is enabled. -->
+    <cura:setting key="retraction_min_travel">5</cura:setting> <!-- default 5 [mm] ; The minimum distance the nozzle must travel without extruding material before a retraction move is triggered. -->
+    <cura:setting key="support_infill_rate">20</cura:setting> <!-- default 20 [%] ; The density of the support infill material. -->
+    <cura:setting key="cool_fan_enabled">False</cura:setting> <!-- fans disabled, to reduce risk of stringing -->
+
+
 
     <!-- <setting key="break preparation position">-16</setting> --> <!-- How far the filament can be stretched before it breaks, while heated -->
     <!-- <setting key="break preparation speed">2</setting> --> <!-- How fast the filament needs to be retracted just before breaking it off in a retraction [mm/s]-->
@@ -77,7 +95,6 @@ Applications
     <!-- <setting key="break position">-50</setting> --> <!-- How far to retract the filament in order to break it cleanly -->
     <!-- <setting key="break speed">25</setting> --> <!-- [mm/s] The speed at which to retract the filament in order to break it cleanly -->
     <!-- <setting key="break temperature">155</setting> --> <!-- The temperature at which the filament is broken for a clean break -->
-    <!-- <setting key="maximum park duration">14400</setting> --> <!-- 14400 = 4 hours "How long the material can be kept out of dry storage safely." -->
     <!-- <setting key="no load move factor">0.98</setting> --> <!-- [default: 0.940860215] A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch -->
     <!-- <setting key="flush purge speed">1.0</setting> --> <!-- default 0.5mm/s: sHow fast to prime the material after switching to a different material. -->
     <!-- <setting key="flush purge length">100</setting> --> <!-- default 50mm: How much material to use to purge the previous material out of the nozzle (in length of filament) when switching to a different material -->
@@ -115,19 +132,14 @@ Applications
       </hotend>
       <hotend id="AA 0.4">
         <setting key="hardware compatible">yes</setting>
-        <setting key="retraction speed">45</setting>
-        <setting key="retraction amount">8</setting> <!-- default 6.5 [mm] ; The length of material retracted during a retraction move.-->  
-        <setting key="material_flow">96</setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
       </hotend>
       <hotend id="AA 0.8">
         <setting key="hardware compatible">yes</setting>
-        <cura:setting key="material_flow">95</cura:setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
-        <!-- <cura:setting key="line_width">0.68</cura:setting> --> <!-- Width of a single line. Generally, the width of each line should correspond to the width of the nozzle. However, slightly reducing this value could produce better prints.. -->
-        <setting key="material_flow">95</setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
-        <setting key="line_width">0.68</setting> <!-- Width of a single line. Generally, the width of each line should correspond to the width of the nozzle. However, slightly reducing this value could produce better prints.. -->
+        <cura:setting key="material_flow">95</cura:setting> <!-- avoid over-extrusion: Flow compensation: the amount of material extruded is multiplied by this value. -->
+        <setting key="material_flow">95</setting> <!-- avoid over-extrusion: Flow compensation: the amount of material extruded is multiplied by this value. -->
         <setting key="retraction speed">45</setting> <!-- higher speed due to larger nozzle -->
-        <setting key="retraction amount">10</setting> <!-- default 6.5 [mm] ; The length of material retracted during a retraction move.-->  
-        <setting key="print temperature">255.0</setting>
+        <setting key="retraction amount">8</setting> <!-- higher retraction due to larger nozzle: default 6.5 [mm] ; The length of material retracted during a retraction move.-->  
+        <setting key="print temperature">260.0</setting> <!-- lower temp for less stringing -->
       </hotend>
         <hotend id="CC 0.4">
         <setting key="hardware compatible">yes</setting>
