@@ -7,10 +7,10 @@
       <color>Black</color>
       <label>Black varioShore TPU</label>
     </name>
-    <version>2</version>
+    <version>3</version>
     <GUID>b579a0d3-1177-428d-84d5-4fa16c57a3b6</GUID>
     <color_code>#0e0e10</color_code>
-    <description>varioShore TPU allows users to vary the density of the material by adjusting temperature and material 
+    <description>v2023-07-29: varioShore TPU allows users to vary the density of the material by adjusting temperature and material 
     throughput (speed and layerheight). At temperatures between 200 and 250C the materials will start to expand to 
     roughly 1.4-1.6 times its original volume. This means the material can be printed at low flow rates (60-70%), 
     to compensate the active foaming, which in return gives very soft printed parts. Between 190-200C the material can be 
@@ -56,7 +56,7 @@
 
     <cura:setting key="material_flow">60</cura:setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
     <cura:setting key="material_flow_layer_0">50.0</cura:setting> <!-- Reduce overly-stickyness on first layer. // Initial Layer Flow. -->
-    <cura:setting key="speed_print">30</cura:setting>
+    <cura:setting key="speed_print">40</cura:setting>
     <cura:setting key="layer_height">0.2</cura:setting>
     <cura:setting key="material_crystallinity">true</cura:setting> <!-- "Is this material the type that breaks off cleanly when heated (crystalline), or is it the type that produces long intertwined polymer chains (non-crystalline)?", -->
     <cura:setting key="build_volume_temperature">46</cura:setting>
@@ -73,6 +73,7 @@
     <cura:setting key="adhesion_type">skirt</cura:setting> <!-- when used with dimafix, there is perfect adhesion, so skirt is perfectly enough  -->
     <cura:setting key="prime_tower_enable">true</cura:setting> <!--  -->
     <cura:setting key="travel_retract_before_outer_wall">true</cura:setting> <!--  -->
+    <cura:setting key="initinitial_layer_line_width_factor">80</cura:setting> <!-- with dimafix this is really sticky, reduce first layer flow  -->
 
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S3" />
