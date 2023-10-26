@@ -44,7 +44,7 @@
     <color_code>#000000</color_code>
     <compatible>True</compatible>
     <definition>fdmprinter</definition>
-    <version>25</version>
+    <version>26</version>
     <GUID>c99377f5-fbb4-4c3b-8f91-7a1d2c32e44f</GUID>
   </metadata>
   <properties>
@@ -61,7 +61,7 @@
     <setting key="anti ooze retract speed">5</setting>
     <setting key="break preparation position">-16</setting> <!-- How far the filament can be stretched before it breaks, while heated -->
     <setting key="break preparation speed">2</setting> <!-- How fast the filament needs to be retracted just before breaking it off in a retraction [mm/s]-->
-    <setting key="break preparation temperature">255</setting> <!-- The temperature used to purge material, should be roughly equal to the highest possible printing temperature -->
+    <setting key="break preparation temperature">250</setting> <!-- ERR999 when HIGHER THAN "print temperature"!!!; The temperature used to purge material, should be roughly equal to the highest possible printing temperature -->
     <setting key="break position">-50</setting> <!-- How far to retract the filament in order to break it cleanly -->
     <setting key="break speed">25</setting> <!-- [mm/s] The speed at which to retract the filament in order to break it cleanly -->
     <setting key="break temperature">105</setting> <!-- The temperature at which the filament is broken for a clean break -->

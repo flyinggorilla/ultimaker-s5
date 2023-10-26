@@ -7,7 +7,7 @@
       <color>Black</color>
       <label>Black varioShore TPU</label>
     </name>
-    <version>3</version>
+    <version>4</version>
     <GUID>b579a0d3-1177-428d-84d5-4fa16c57a3b6</GUID>
     <color_code>#0e0e10</color_code>
     <description>v2023-07-29: varioShore TPU allows users to vary the density of the material by adjusting temperature and material 
@@ -31,7 +31,7 @@
     <setting key="heated bed temperature">80</setting>
     <setting key="standby temperature">175</setting>
     <setting key="adhesion tendency">3</setting>
-    <setting key="surface energy">100</setting> <!-- not used by cura! this setting describes how strong the energy is with the printed material. -->
+    <setting key="surface energy">70</setting> <!-- not used by cura! this setting describes how strong the energy is with the printed material. -->
     <setting key="build volume temperature">47</setting> <!-- keep the fan quiet -->
     <setting key="retraction speed">45</setting> <!-- The speed at which the filament is retracted and primed during a retraction move.-->
     <setting key="retraction amount">10</setting> <!-- default 6.5 [mm] ; The length of material retracted during a retraction move.-->  
@@ -40,19 +40,19 @@
     <setting key="flow sensor detection margin">2.0</setting> <!-- trying to avoid ER65 with higher number; default: 0.8 For material flow sensor -->
     <setting key="retract compensation">0</setting> <!-- For material flow sensor -->
 
-   <!-- <setting key="anti ooze retract position">0</setting> -->
-   <!-- <setting key="anti ooze retract speed">25</setting> -->
-   <!-- <setting key="break preparation position">0</setting> -->
-   <!-- <setting key="break preparation speed">2</setting> -->
-   <!-- <setting key="break preparation temperature">223</setting> --> <!-- The temperature used to purge material, should be roughly equal to the highest possible printing temperature -->
-   <!-- <setting key="break position">-100</setting> --> <!-- How far to retract the filament in order to break it cleanly -->
-   <!-- <setting key="break speed">25</setting> --> <!-- [mm/s] The speed at which to retract the filament in order to break it cleanly -->
+   <setting key="anti ooze retract position">-20</setting>
+   <setting key="anti ooze retract speed">25</setting>
+   <setting key="break preparation position">-20</setting>
+   <setting key="break preparation speed">2</setting>
+   <setting key="break preparation temperature">223</setting> <!-- The temperature used to purge material, should be roughly equal to the highest possible printing temperature -->
+   <setting key="break position">-100</setting> <!-- How far to retract the filament in order to break it cleanly -->
+   <setting key="break speed">25</setting> <!-- [mm/s] The speed at which to retract the filament in order to break it cleanly -->
    <!-- <setting key="pressure release dwell time">25</setting> -->
    <!-- <setting key="dwell time before break preparation move">0</setting> -->
    <!-- <setting key="end of print purge volume">0</setting> -->
    <!-- <setting key="end of filament purge volume">0</setting> -->
-   <!-- <setting key="flush purge length">60</setting> --> <!-- How much material to use to purge the previous material out of the nozzle (in length of filament) when switching to a different material -->
-   <!-- <setting key="no load move factor">1.0</setting> -->  <!-- [default: 0.940860215] A too high value (like 1.05 or higher causes decouple issues) ::: A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch -->
+   <setting key="flush purge length">60</setting> <!-- How much material to use to purge the previous material out of the nozzle (in length of filament) when switching to a different material -->
+   <setting key="no load move factor">1.0</setting>  <!-- [default: 0.940860215] A too high value (like 1.05 or higher causes decouple issues) ::: A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch -->
 
     <cura:setting key="material_flow">60</cura:setting> <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
     <cura:setting key="material_flow_layer_0">50.0</cura:setting> <!-- Reduce overly-stickyness on first layer. // Initial Layer Flow. -->
