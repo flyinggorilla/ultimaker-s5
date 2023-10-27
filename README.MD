@@ -4,20 +4,15 @@
 ## favorite materials
 * FormFutura ApolloX (all colors)
 * FormFutura BVOH
-* Luvocom PAHT 9933BK 
 
 ## additional great materials
 * FormFutura PythonFlex
 * FormFutura CrystalFlex
 * FormFutura HDglass PETG
+* Luvocom PAHT 9933BK 
 
 ## materials i stopped using
 * FormFutura Helios PVA (I switched all soluble support to BVOH, which is much more reliable and no clogging any more.)
-
-## __Luvocom PAHT 9933BK__ for robust parts
-The biggest benefits of this Nylon material is much stronger inter-layer adhesion than ApolloX. Also it does not warp compared to other nylons. Prints well on Dimafix. Also it is fairly heat resistant.
-
-This material is also available on the marketplace, but not optimized enough. Especially printing with 0.8mm Nozzle for larger parts caused lots of stringing. The profile lowered print temperature and increased retraction to reduce stringing. Drying the material upfront (12h 70°, or 4h 100°) is mandatory.
 
 ## __FormFutura ApolloX ASA__ for outdoor parts
 There is a FormFutura ApolloX listed on the marketplace, but that one is STILL not  supporting material station properly, because it misses color and additional material profile settings. So choose this one and you should be fine.
@@ -32,8 +27,15 @@ These profiles here are tuned for practical-use parts, with higher temperature f
 
 
 ## __FormFutura BVOH__ water soluble support material
+Forget PVA, BVOH is so much better more than justifying the higher price. Prints easier, didnt clog so far my BB 0.4, dissolves much quicker than PVA in warm water. Can be combined with many filaments, including ASA - my favorite material. Had so much of clogging issues with original Ultimaker PVA that i stopped using PVA entirely. Had then issues with FormFutura Helios PVA too.
 
-Forget PVA, BVOH is so much . I had only troubles works so far much better than PVA. Prints easier, didnt clog so far my BB 0.4, dissolves much quicker than PVA in warm water. Can be combined with many filaments, including ASA - my favorite material. Had so much of clogging issues with original Ultimaker PVA that i stopped it. Had then issues with FormFutura Helios PVA too however
+## __Luvocom PAHT 9933BK__ for robust parts, but NOT outdoors. 
+The biggest benefits of this Nylon material is much stronger inter-layer adhesion than ApolloX. Also it does not warp compared to other nylons. Prints well on Dimafix. Also it is fairly heat resistant.
+
+This material is also available on the marketplace, but not optimized enough. Especially printing with 0.8mm Nozzle for larger parts caused lots of stringing. The profile lowered print temperature and increased retraction to reduce stringing. Drying the material upfront (12h 70°, or 4h 100°) is mandatory.
+
+I learned the hard way, that this material strongly deforms in outdoor use, rendering it unusable.
+ApolloX is still my favorite outdoor use material. However, I plan to test Durabio next, which is a PC/PMMA material that is UV resistant.
 
 
 # Formfutura cardboard spool adapter for Ultimaker S5 and S3

@@ -41,10 +41,10 @@
         Fan speed: 0-25%
         Experience level: Beginner / Intermediate
     </adhesion_info>
-    <color_code>#000000</color_code>
+    <color_code>#101010</color_code>
     <compatible>True</compatible>
     <definition>fdmprinter</definition>
-    <version>26</version>
+    <version>27</version>
     <GUID>c99377f5-fbb4-4c3b-8f91-7a1d2c32e44f</GUID>
   </metadata>
   <properties>
@@ -90,7 +90,34 @@
 
 
     <machine>
-      <!--<machine_identifier manufacturer="Ultimaker B.V." product="ultimaker_s5" />-->
+      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S7" />
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="BB 0.8">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="AA 0.25">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+        <hotend id="CC 0.6">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <buildplate id="Glass">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">yes</setting>
+      </buildplate>
+      <buildplate id="Aluminum">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">no</setting>
+      </buildplate>
+    </machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
       <hotend id="BB 0.4">
         <setting key="hardware compatible">no</setting>
