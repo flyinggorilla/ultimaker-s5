@@ -3,10 +3,12 @@
   <metadata>
     <name>
       <brand>FormFutura</brand>
-      <material>HDglass See Through Black</material>
-      <color>See Through Black</color>
-      <label>HDglass PETG see through black</label>
+      <material>HDglass</material>
+      <color>Black Translucent</color>
     </name>
+    <color_code>#F0F0F0</color_code>
+    <GUID>7e9be86b-ebef-40dc-9a3d-bcad6baa013d</GUID>
+    <version>3</version>
     <description>
       HDglass is a high performance filament based on an unique PETG blend resulting in an 
       amorphous, high strength, high gloss and ultra-transparent 3D printer filament.
@@ -26,11 +28,6 @@
       Fan speed: 30-100%
       Experience level: Beginner
     </adhesion_info>
-    <color_code>#F0F0F0</color_code>
-    <compatible>True</compatible>
-    <definition>fdmprinter</definition>
-    <version>1</version>
-    <GUID>7e9be86b-ebef-40dc-9a3d-bcad6baa013d</GUID>
   </metadata>
   <properties>
     <density>1.27</density>
@@ -38,56 +35,69 @@
     <weight>750</weight>
   </properties>
   <settings>
-    <setting key="print cooling">30</setting>
-    <setting key="print temperature">235.0</setting>
-    <setting key="standby temperature">80.0</setting>
-    <setting key="retraction amount">8.0</setting>
-    <setting key="heated bed temperature">80.0</setting>
-    <setting key="relative extrusion">1.05</setting>
-    <setting key="anti ooze retract position">-5</setting>
-    <setting key="anti ooze retract speed">10</setting>
-    <setting key="break preparation position">-16</setting>
-    <setting key="break preparation speed">2</setting>
-    <setting key="break preparation temperature">240</setting>
-    <setting key="break position">-50</setting>
-    <setting key="break speed">5</setting>
-    <setting key="break temperature">80</setting>
-    <setting key="maximum park duration">300</setting>
-    <setting key="no load move factor">1.0</setting>
-    <setting key="flush purge speed">1</setting>
-    <setting key="end of filament purge speed">1</setting>
-    <setting key="flush purge length">60</setting>
-    <setting key="end of filament purge length">20</setting>
-    <setting key="build volume temperature">42</setting>    <!-- For material flow sensor -->
+    <!-- print settings -->
+    <setting key="print temperature">250</setting>    <!-- go high enough for better inter-layer-adhesion -->
+    <setting key="heated bed temperature">90</setting>
+    <setting key="adhesion tendency">0</setting>
+    <setting key="relative extrusion">1.0</setting>
+    <setting key="print cooling">0</setting>
+    <setting key="standby temperature">85</setting>
+    <setting key="retraction amount">5</setting>
+
+    <!-- Deprime settings -->
+    <setting key="anti ooze retract position">-4</setting>
+    <setting key="anti ooze retract speed">5</setting>
+    <setting key="break preparation position">-16</setting>    <!-- How far the filament can be stretched before it breaks, while heated -->
+    <setting key="break preparation speed">2</setting>    <!-- How fast the filament needs to be retracted just before breaking it off in a retraction [mm/s]-->
+    <setting key="break preparation temperature">240</setting>    <!-- The temperature used to purge material, should be roughly equal to the highest possible printing temperature -->
+    <setting key="break position">-50</setting>    <!-- How far to retract the filament in order to break it cleanly -->
+    <setting key="break speed">25</setting>    <!-- [mm/s] The speed at which to retract the filament in order to break it cleanly -->
+    <setting key="break temperature">105</setting>    <!-- The temperature at which the filament is broken for a clean break -->
+    <setting key="dwell time before break preparation move">0</setting>
+
+    <!-- material station (un)loading settings -->
+    <setting key="maximum park duration">14400</setting>    <!-- 14400 = 4 hours "How long the material can be kept out of dry storage safely." -->
+    <setting key="no load move factor">0.98</setting>    <!-- [default: 0.940860215] A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch -->
+
+    <setting key="flush purge speed">1.0</setting>    <!-- default 0.5mm/s: sHow fast to prime the material after switching to a different material. -->
+    <setting key="flush purge length">100</setting>    <!-- default 50mm: How much material to use to purge the previous material out of the nozzle (in length of filament) when switching to a different material -->
+    <setting key="end of filament purge speed">1.0</setting>    <!-- default: 0.5mm: How fast to prime the material after replacing an empty spool with a fresh spool of the same material-->
+    <setting key="end of filament purge length">20</setting>    <!-- default: 20mm: "How much material to use to purge the previous material out of the nozzle (in length of filament) when replacing an empty spool with a fresh spool of the same material." -->
+    <setting key="build volume temperature">45</setting>    <!-- a setting of 42+ keeps AirManager more quiet, 45 keeps enough airflow going -->
+    <setting key="surface energy">70</setting>
+    <setting key="shrinkage percentage">1.5</setting>    <!-- was 0.9, adjusted to 1.5 based on experience with large prints -->
+    <setting key="relative extrusion">1.0</setting>    <!-- For material flow sensor -->
+    <setting key="flow sensor detection margin">0.8</setting>    <!-- For material flow sensor -->
+    <setting key="retract compensation">0</setting>    <!-- For material flow sensor -->
+
+
+        <!-- cura settings -->
+    <cura:setting key="xy_offset">0.0</cura:setting> <!-- "Amount of offset applied to all polygons in each layer. Positive values can compensate for too big holes; negative values can compensate for too small holes." -->
+    <cura:setting key="xy_offset_layer_0">-0.2</cura:setting> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->
+    <cura:setting key="hole_xy_offset">0.1</cura:setting> <!-- Hole Horizontal Expansion: Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes. -->
+    <cura:setting key="infill_pattern">cubicsubdiv</cura:setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
+    <cura:setting key="alternate_extra_perimeter">yes</cura:setting> <!-- Prints an extra wall at every other layer. This way infill gets caught between these extra walls, resulting in stronger prints. -->
+    <cura:setting key="adhesion_type">skirt</cura:setting> <!-- when used with dimafix, there is perfect adhesion, so skirt is perfectly enough  -->
+
 
     <machine>
+      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S7" />
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
-      <hotend id="BB 0.8">
-        <setting key="hardware compatible">no</setting>
+      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S3" />
+      <hotend id="AA 0.25">
+        <setting key="hardware compatible">yes</setting>
       </hotend>
       <hotend id="AA 0.4">
         <setting key="hardware compatible">yes</setting>
       </hotend>
-      <hotend id="AA 0.25">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="BB 0.4">
-        <setting key="hardware compatible">no</setting>
-      </hotend>
       <hotend id="AA 0.8">
         <setting key="hardware compatible">yes</setting>
+        <setting key="retraction amount">8</setting>
       </hotend>
-      <hotend id="CC 0.6">
+        <hotend id="CC 0.6">
         <setting key="hardware compatible">yes</setting>
       </hotend>
-      <buildplate id="Glass">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="hardware recommended">yes</setting>
-      </buildplate>
-      <buildplate id="Aluminum">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="hardware recommended">yes</setting>
-      </buildplate>
-    </machine>
+    </machine>    
+
   </settings>
 </fdmmaterial>
