@@ -75,6 +75,7 @@
     <cura:setting key="prime_tower_enable">true</cura:setting>    <!--  -->
     <cura:setting key="travel_retract_before_outer_wall">true</cura:setting>    <!--  -->
     <cura:setting key="initinitial_layer_line_width_factor">80</cura:setting>    <!-- with dimafix this is really sticky, reduce first layer flow  -->
+    <cura:setting key="retraction_hop_enabled">false</cura:setting> <!-- when enabled, this lifts the nozzle while retracted and travelling; however this wears the Z spindle and doesnt bring significant benefits   --> 
 
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S3" />

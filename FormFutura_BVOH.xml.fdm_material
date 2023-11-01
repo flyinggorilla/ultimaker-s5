@@ -78,6 +78,8 @@
     <cura:setting key="support_pattern">gyroid</cura:setting> <!-- great for fast dissolvment of water soluble filaments, yet robust enough -->
     <cura:setting key="switch_extruder_extra_prime_amount">5</cura:setting> <!-- ensure there is enough flow at prime tower, especially important after extruder change (and pauses before)-->
     <cura:setting key="material_crystallinity">true</cura:setting> <!--Revolutionary new polymer, Butendiol Vinyl Alcohol co-Polymer "BVOH" -->
+    <cura:setting key="retraction_hop_enabled">false</cura:setting> <!-- when enabled, this lifts the nozzle while retracted and travelling; however this wears the Z spindle and doesnt bring significant benefits   --> 
+
     
     <!-- <cura:setting key="support_z_distance">0.0</cura:setting> --> <!-- Distance from the top/bottom of the support structure to the print. This gap provides clearance to remove the supports after the model is printed. This value is rounded up to a multiple of the layer height.-->
     <!-- <cura:setting key="xy_offset_layer_0">-0.2</cura:setting> --> <!-- Initial Layer Horizontal Expansion: Amount of offset applied to all polygons in the first layer. A negative value can compensate for squishing of the first layer known as \"elephant's foot\"." -->

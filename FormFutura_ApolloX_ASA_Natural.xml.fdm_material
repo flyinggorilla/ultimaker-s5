@@ -93,6 +93,7 @@
     <cura:setting key="infill_pattern">cubicsubdiv</cura:setting> <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
     <cura:setting key="alternate_extra_perimeter">yes</cura:setting> <!-- Prints an extra wall at every other layer. This way infill gets caught between these extra walls, resulting in stronger prints. -->
     <cura:setting key="adhesion_type">skirt</cura:setting> <!-- when used with dimafix, there is perfect adhesion, so skirt is perfectly enough  -->
+    <cura:setting key="retraction_hop_enabled">false</cura:setting> <!-- when enabled, this lifts the nozzle while retracted and travelling; however this wears the Z spindle and doesnt bring significant benefits   --> 
 
 
     <machine>
