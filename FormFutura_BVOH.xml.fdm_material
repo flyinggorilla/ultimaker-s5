@@ -6,13 +6,10 @@
       <brand>FormFutura</brand>
       <material>BVOH</material>
       <color>Natural</color>
-      <label>BVOH</label>
     </name>
     <GUID>eeb45bce-beb2-45d2-bd93-58de5bac4e81</GUID>
-    <compatible>True</compatible>
     <color_code>#f5f2d1</color_code>
-    <version>3</version>
-    <definition>fdmprinter</definition>
+    <version>4</version>
     <description>FormFutura's BVOH - Butenediol Vinyl Alcohol Co-polymer - 
         3D printer filament is an advanced water-soluble support material for 
         complex multi-extrusion 3D printing. BVOH bonds to nearly all 
@@ -56,7 +53,7 @@
     <setting key="build volume temperature">47</setting>
     <setting key="print cooling">0</setting>
     <setting key="print speed">30</setting> <!-- max 35mm/s for BVOH, to reduce blockage risk go slower -->
-    <setting key="retraction amount">5</setting> <!-- default 6.5mm: The length of material retracted during a retraction move. -->
+    <setting key="retraction amount">3</setting> <!-- default 6.5mm: The length of material retracted during a retraction move. -->
     <setting key="retraction speed">20</setting> <!-- default 25mm/s: The speed at which the filament is retracted and primed during a retraction move.. -->
     <setting key="anti ooze retract position">-2</setting> <!-- default -4mm: "How far the material needs to be retracted before it stops oozing."-->
     <setting key="anti ooze retract speed">5</setting> <!-- default 5mm/s: "How fast the material needs to be retracted during a filament switch to prevent oozing."-->
@@ -64,7 +61,7 @@
     <setting key="break preparation speed">25</setting> <!-- How fast the filament needs to be retracted just before breaking it off in a retraction [mm/s]-->
     <setting key="break preparation temperature">230</setting> <!-- The temperature used to purge material, should be roughly equal to the highest possible printing temperature -->
     <setting key="break position">-50</setting> <!-- How far to retract the filament in order to break it cleanly -->
-    <setting key="break speed">5</setting> <!-- default 2mm/s"How fast the filament needs to be retracted just before breaking it off in a retraction."-->
+    <setting key="break speed">20</setting> <!-- default 2mm/s"How fast the filament needs to be retracted just before breaking it off in a retraction."-->
     <setting key="break temperature">90</setting> <!-- The temperature at which the filament is broken for a clean break -->
     <setting key="maximum park duration">300</setting> <!-- seconds. "How long the material can be kept out of dry storage safely." -->
     <setting key="no load move factor">0.94</setting> <!-- This setting expresses the difference in the length of the filament when it's being compressed between the feeder and the nozzle chamber. Materials that compress more easily, such as TPU or Polypropylene, will have a lower factor than stiff materials such as PLA. -->
@@ -91,57 +88,16 @@
                                                                       In addition to outstanding transparency and solvent resistance, through the combination of “low crystallinity” with “high hydrogen bonding strength”, which are traits that are ordinarily in conflict, this new material realizes functions that had not been possible with conventional PVOH. These include low melting points, high stretching characteristics and high gas barrier performance, as well as low foaming, aqueous solution stability and emulsification performance. -->
 
     <machine>
+      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S7" />
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
-
-      <hotend id="AA 0.8">
-        <setting key="hardware compatible">no</setting>
-      </hotend>
-      <hotend id="AA 0.25">
-        <setting key="hardware compatible">no</setting>
-      </hotend>
-      <hotend id="AA 0.4">
-        <setting key="hardware compatible">no</setting>
-      </hotend>
-      <hotend id="BB 0.4">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="BB 0.8">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-
-      <buildplate id="Aluminum">
-        <setting key="hardware compatible">no</setting>
-        <setting key="hardware recommended">no</setting>
-      </buildplate>
-      <buildplate id="Glass">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="hardware recommended">yes</setting>
-      </buildplate>
-    </machine>
-    <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S3" />
+
       <hotend id="BB 0.4">
         <setting key="hardware compatible">yes</setting>
       </hotend>
       <hotend id="BB 0.8">
         <setting key="hardware compatible">yes</setting>
       </hotend>
-      <hotend id="AA 0.25">
-        <setting key="hardware compatible">no</setting>
-      </hotend>
-      <hotend id="AA 0.4">
-        <setting key="hardware compatible">no</setting>
-      </hotend>
-      <hotend id="AA 0.8">
-        <setting key="hardware compatible">no</setting>
-      </hotend>
-      <hotend id="CC 0.6">
-        <setting key="hardware compatible">no</setting>
-      </hotend>
-      <buildplate id="Glass">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="hardware recommended">yes</setting>
-      </buildplate>
     </machine>
 
   </settings>
