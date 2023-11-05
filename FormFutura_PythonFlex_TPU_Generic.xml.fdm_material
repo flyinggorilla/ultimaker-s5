@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<fdmmaterial version="1.3" 
+  xmlns="http://www.ultimaker.com/material">
+  <metadata>
+    <name>
+      <brand>FormFutura</brand>
+      <material>PythonFlex</material>
+      <color> </color> <!-- tag is required, so just have one empty space here -->
+      <!--<label>Generic PythonFlex TPU</label>-->
+    </name>
+    <description>
+     Python Flex is a high-performance flexible thermoplastic polyurethane (TPU) filament, which is designed for high speed printing on both direct drive and Bowden style extruders. Python Flex is an extremely easy to print flexible filament which can be printed directly on a glass plate without having to use the heatbed. Python Flex has a shore hardness of 98A and has great elastic properties as allows itself to be stretched up to 450% before breaking. Python Flex is extremely transparent in its natural form and has excellent resistance to oil, greases, microorganisms and abrasion.
+
+Unique features
+Perfect combination of strength, flexibility and elasticity
+Designed for high speed printing
+Flexible filament that can be printed at speeds of >80mm/s
+Heat resistant up to 138°C
+Watertight printing possible with only single wall prints
+Excellent resistance to oil, greases, microorganisms and abrasion
+Very easy to print on both direct drive &amp; Bowden style extruders
+Warp-free printing and no deformation after cooling
+Improved flowing behaviour and inter-layer adhesion
+Good first layer adhesion to several (un)heated print surfaces
+    </description>
+    <adhesion_info>
+Nozzle size: ≥ 0.3mm
+Layer height: ≥ 0.1mm
+Flow rate: ± 110 - 130% *
+Print temp: ± 220 - 250° C *
+Print speed: Medium-Fast
+Retraction: Yes ± 5mm
+Heat bed: ± 0 - 60° C
+Fan speed: 50-100%
+Experience level: Intermediate
+    </adhesion_info>
+    <!--<color_code>#FFFFFF</color_code>-->
+    <compatible>True</compatible>
+    <definition>fdmprinter</definition>
+    <version>9</version>
+    <GUID>7f3d188b-99d6-444f-bfbf-694592eb0e86</GUID>
+  </metadata>
+  <properties>
+    <density>1.16</density>
+    <diameter>2.85</diameter>
+    <weight>500</weight>
+  </properties>
+  <settings>
+    <setting key="surface energy">100</setting>
+    <setting key="heated bed temperature">60</setting>
+    <setting key="standby temperature">150</setting>
+    <setting key="print cooling">100</setting>
+    <setting key="print temperature">235.0</setting>
+    <setting key="adhesion tendency">0</setting>
+    <setting key="retraction amount">10.0</setting>
+    <setting key="flow">106</setting>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="BB 0.8">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="AA 0.25">
+        <setting key="hardware compatible">no</setting>
+      </hotend>
+      <hotend id="AA 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.8">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="CC 0.6">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <buildplate id="Glass">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">yes</setting>
+      </buildplate>
+      <buildplate id="Aluminum">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="hardware recommended">no</setting>
+      </buildplate>
+    </machine>
+  </settings>
+</fdmmaterial>
