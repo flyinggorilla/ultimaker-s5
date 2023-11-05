@@ -48,17 +48,17 @@ def ReadMetadata(filepath):
             metadata["label"], metadata["color"], metadata["guid"]))
         
         #print(u.fdmmaterial.settings.machine)
-        ums5 = False
-        wrongCuraExport = ""
-        for m in u.fdmmaterial.settings.machine:
-            if m.machine_identifier["product"] == "Ultimaker S5":
-                ums5 = True
-            if m.machine_identifier["product"] == "ultimaker_s5":
-                wrongCuraExport = "\nCura material export detected, change 'ultimaker_s5' to 'Ultimaker S5'"
-            #print(m.machine_identifier["product"])
-
-        if not ums5:
-            quit("ERROR: No compatible machine setting in %s detected. product attribute must be 'Ultimaker S5'. %s" % (filepath, wrongCuraExport))
+        #ums5 = False
+        #wrongCuraExport = ""
+        #for m in u.fdmmaterial.settings.machine:
+        #    if m.machine_identifier["product"] == "Ultimaker S5":
+        #        ums5 = True
+        #    if m.machine_identifier["product"] == "ultimaker_s5":
+        #        wrongCuraExport = "\nCura material export detected, change 'ultimaker_s5' to 'Ultimaker S5'"
+        #    #print(m.machine_identifier["product"])
+        #
+        #if not ums5:
+        #    quit("ERROR: No compatible machine setting in %s detected. product attribute must be 'Ultimaker S5'. %s" % (filepath, wrongCuraExport))
 
         return metadata
 
