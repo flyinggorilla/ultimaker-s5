@@ -9,7 +9,7 @@
     </name>
     <color_code>#A0A0A0</color_code>
     <GUID>cfa7e765-c90a-4000-af3b-0d5a6e6b8180</GUID>
-    <version>1</version>
+    <version>3</version>
     <description>FlexiFil is a rubber-like flexible TPC type of 3D printer filament that offer flexibility with a “flexural memory”, 
     long term heat resistance, strength and an excellent resistance to UV and chemicals.
     
@@ -23,18 +23,18 @@
   <settings>
     <!-- print settings -->
     <setting key="print temperature">240</setting>
-    <setting key="print cooling">50</setting>
-    <setting key="heated bed temperature">85</setting>
+    <setting key="print cooling">0</setting>
+    <setting key="heated bed temperature">80</setting>
     <setting key="adhesion tendency">3</setting>
     <setting key="surface energy">100</setting>
     <setting key="build volume temperature">42</setting>
     <setting key="retraction amount">8</setting>
-    <setting key="retraction speed">40</setting>
+    <setting key="retraction speed">35</setting>
 
     <!-- Deprime settings -->
-    <setting key="anti ooze retract position">-6</setting>
+    <setting key="anti ooze retract position">-8</setting>
     <setting key="anti ooze retract speed">25</setting>
-    <setting key="break preparation position">-16</setting>
+    <setting key="break preparation position">-20</setting>
     <setting key="break preparation speed">2</setting>
     <setting key="break preparation temperature">230</setting>
     <setting key="break temperature">205</setting>
@@ -43,13 +43,14 @@
     <setting key="dwell time before break preparation move">0</setting>
 
     <!-- material station (un)loading settings -->
+    <!-- TPC DOES NOT WORK WITH MATERIAL STATION - IT HAS TOO MUCH FRICTION -->
     <setting key="maximum park duration">7200</setting>
     <setting key="no load move factor">1.05</setting>
     <setting key="flush purge speed">1.0</setting>
     <setting key="flush purge length">60</setting>
     <setting key="end of filament purge speed">1.0</setting>
     <setting key="end of filament purge length">20</setting>
-    <setting key="standby temperature">175</setting>
+    <setting key="standby temperature">125</setting> <!-- keep it low to avoid oozing in dual extrusion mode -->
 
     <!-- material flow sensor settings -->
     <setting key="retract compensation">0</setting>
@@ -65,11 +66,47 @@
     <cura:setting key="adhesion_type">skirt</cura:setting>    <!-- when used with dimafix, there is perfect adhesion, so skirt is perfectly enough  -->
     <cura:setting key="retraction_hop_enabled">false</cura:setting>    <!-- when enabled, this lifts the nozzle while retracted and travelling; however this wears the Z spindle and doesnt bring significant benefits   -->
     <cura:setting key="infill_enable_travel_optimization">true</cura:setting>    <!--  -->
-    <cura:setting key="infill_pattern">cross_3d</cura:setting>    <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
+    <!-- <cura:setting key="infill_pattern">cross_3d</cura:setting> -->   <!-- The pattern of the infill material of the print. The line and zig zag infill swap direction on alternate layers, reducing material cost. The grid, triangle, tri-hexagon, cubic, octet, quarter cubic, cross and concentric patterns are fully printed every layer. Gyroid, cubic, quarter cubic and octet infill change with every layer to provide a more equal distribution of strength over each direction..-->
     <cura:setting key="infill_sparse_density">50.0</cura:setting>    <!-- % infill density-->
-    <cura:setting key="infill_overlap">5</cura:setting>    <!-- % -->
+    <cura:setting key="infill_overlap">10</cura:setting>    <!-- % -->
+
+    <!-- cura settings for flexible filament -->
+    <cura:setting key="material_initial_print_temperature">200</cura:setting> <!-- avoid oozing during heatup phase before switching extruders -->
+    <cura:setting key="retraction_combing">no_outer_surfaces</cura:setting>
+    <cura:setting key="material_bed_temperature">80</cura:setting> 
+    <cura:setting key="coasting_enable">True</cura:setting>
+    <cura:setting key="coasting_volume">0.5</cura:setting>
+
+    <cura:setting key="speed_print">30</cura:setting>    
+    <cura:setting key="material_flow">120</cura:setting>    <!-- Flow compensation: the amount of material extruded is multiplied by this value. -->
+    <cura:setting key="material_flow_layer_0">100.0</cura:setting>    <!-- Reduce overly-stickyness on first layer. // Initial Layer Flow. -->
+    <cura:setting key="material_crystallinity">true</cura:setting>    <!-- "Is this material the type that breaks off cleanly when heated (crystalline), or is it the type that produces long intertwined polymer chains (non-crystalline)?", -->
+
+    <cura:setting key="adhesion_type">skirt</cura:setting>
+    <cura:setting key="prime_tower_size">30</cura:setting>    
+    <cura:setting key="retraction_combing_max_distance">150.0</cura:setting>    
+    <cura:setting key="retraction_extra_prime_amount">0.2</cura:setting>    
+    <cura:setting key="retraction_hop_enabled">True</cura:setting>    
+    <cura:setting key="retraction_min_travel">10</cura:setting>    
+    <cura:setting key="retraction_prime_speed">10</cura:setting>
+    <cura:setting key="retraction_speed">35</cura:setting>    
+    <cura:setting key="switch_extruder_extra_prime_amount">0</cura:setting>    
+    <cura:setting key="switch_extruder_prime_speed">10</cura:setting>    
+    <cura:setting key="switch_extruder_retraction_amount">20</cura:setting>   
 
 
+    <cura:setting key="material_flow_layer_0">100</cura:setting>
+    <cura:setting key="material_print_temperature">240.0</cura:setting>
+    <cura:setting key="material_standby_temperature">125.0</cura:setting>
+    <cura:setting key="prime_tower_min_volume">40</cura:setting>
+    <cura:setting key="retraction_amount">10</cura:setting>
+    <cura:setting key="roofing_line_width">0.8</cura:setting>
+    <cura:setting key="switch_extruder_extra_prime_amount">0</cura:setting>
+    <cura:setting key="switch_extruder_prime_speed">20.0</cura:setting>
+    <cura:setting key="top_bottom_thickness">0.8</cura:setting>
+    <cura:setting key="travel_avoid_other_parts">False</cura:setting>
+    <cura:setting key="wall_0_wipe_dist">0.4</cura:setting>
+    <cura:setting key="wall_thickness">0.8</cura:setting>
 
     <machine>
       <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S3" />
@@ -87,3 +124,4 @@
     </machine>
   </settings>
 </fdmmaterial>
+ 
