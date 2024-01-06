@@ -9,7 +9,7 @@
     </name>
     <color_code>#101010</color_code>
     <GUID>7a02ce1c-88ba-4efe-8680-06c026514ddd</GUID>
-    <version>3</version>
+    <version>4</version>
     <description>FormFutura High Precision PET is a pure PET filament that is developed for consistent batch-to-batch production via 3D printing. 
                 This filament has a guaranteed precision on diameter, ovality, shrinkage, and color tolerances</description>
     <adhesion_info>Use Dimafix.</adhesion_info>
@@ -20,7 +20,7 @@
   </properties>
   <settings>
     <!-- print settings -->
-    <setting key="print temperature">240</setting>
+    <setting key="print temperature">250</setting>
     <setting key="print cooling">0</setting>
     <setting key="heated bed temperature">100</setting>
     <setting key="adhesion tendency">0</setting>
