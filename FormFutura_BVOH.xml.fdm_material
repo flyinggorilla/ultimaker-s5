@@ -9,7 +9,7 @@
     </name>
     <GUID>eeb45bce-beb2-45d2-bd93-58de5bac4e81</GUID>
     <color_code>#f5f2d1</color_code>
-    <version>4</version>
+    <version>5</version>
     <description>FormFutura's BVOH - Butenediol Vinyl Alcohol Co-polymer - 
         3D printer filament is an advanced water-soluble support material for 
         complex multi-extrusion 3D printing. BVOH bonds to nearly all 
@@ -74,7 +74,10 @@
     <setting key="relative extrusion">1.0</setting> <!-- For material flow sensor -->
     <setting key="support_z_distance">0.0</setting> <!-- Distance from the top/bottom of the support structure to the print. This gap provides clearance to remove the supports after the model is printed. This value is rounded up to a multiple of the layer height.-->
 
-
+    <cura:setting key="support_xy_distance">0.1</cura:setting>
+    <cura:setting key="support_xy_distance_overhang">0.1</cura:setting>
+    <cura:setting key="support_z_distance">0</cura:setting>
+    <cura:setting key="support_interface_material_flow">100</cura:setting>
     <cura:setting key="support_pattern">gyroid</cura:setting> <!-- great for fast dissolvment of water soluble filaments, yet robust enough -->
     <cura:setting key="switch_extruder_extra_prime_amount">5</cura:setting> <!-- ensure there is enough flow at prime tower, especially important after extruder change (and pauses before)-->
     <cura:setting key="material_crystallinity">true</cura:setting> <!--Revolutionary new polymer, Butendiol Vinyl Alcohol co-Polymer "BVOH" -->

@@ -9,8 +9,8 @@
     </name>
     <color_code>#dbdbdb</color_code>
     <GUID>5ab33bab-4b27-44cd-9ac6-77c99d41b4a1</GUID>
-    <version>3</version>
-    <description>Addigy 2045, former Arnitel ID2045, Shore 34D. Does not work with material station.</description>
+    <version>4</version>
+    <description>Addigy 2045, former Arnitel ID2045, Shore 34D. Does not work with material station. The slower the print, the better the flow</description>
     <adhesion_info>Use Magigoo for flexible filaments. Dimafix does not work for this material.</adhesion_info>
   </metadata>
   <properties>
@@ -19,7 +19,7 @@
   </properties>
   <settings>
     <!-- print settings -->
-    <setting key="print temperature">240</setting>
+    <setting key="print temperature">243</setting>
     <setting key="print cooling">100</setting>
     <setting key="heated bed temperature">110</setting>
     <setting key="adhesion tendency">3</setting>
@@ -58,44 +58,51 @@
     <!-- general settings -->
     <cura:setting key="adhesion_type">skirt</cura:setting>
     <cura:setting key="alternate_extra_perimeter">yes</cura:setting>
-    <cura:setting key="coasting_enable">true</cura:setting>
+    <cura:setting key="coasting_enable">false</cura:setting>
     <cura:setting key="coasting_volume">0.5</cura:setting>
     <cura:setting key="hole_xy_offset">0.1</cura:setting>
     <cura:setting key="infill_enable_travel_optimization">true</cura:setting>
     <cura:setting key="infill_overlap">10</cura:setting>
     <cura:setting key="infill_pattern">cubicsubdiv</cura:setting>
     <cura:setting key="infill_sparse_density">50.0</cura:setting>
-    <cura:setting key="line_width">0.34</cura:setting>
+    <cura:setting key="ironing_enabled">False</cura:setting>
+    <cura:setting key="ironing_flow">2</cura:setting>
+    <cura:setting key="ironing_line_spacing">0.1</cura:setting>
+    <cura:setting key="ironing_only_highest_layer">True</cura:setting>
+    <cura:setting key="ironing_pattern">zigzag</cura:setting>
+    <cura:setting key="line_width">0.3</cura:setting> 
     <cura:setting key="material_bed_temperature">110</cura:setting>
     <cura:setting key="material_crystallinity">true</cura:setting>
-    <cura:setting key="material_flow">120</cura:setting>
-    <cura:setting key="material_flow_layer_0">120.0</cura:setting>
+    <cura:setting key="material_flow">135</cura:setting>
+    <cura:setting key="material_flow_layer_0">135.0</cura:setting>
     <cura:setting key="material_initial_print_temperature">235</cura:setting>
-    <cura:setting key="material_print_temperature">240.0</cura:setting>
+    <cura:setting key="material_print_temperature">243.0</cura:setting>
     <cura:setting key="material_standby_temperature">125.0</cura:setting>
     <cura:setting key="prime_tower_base_height">2</cura:setting>
     <cura:setting key="prime_tower_base_size">5</cura:setting>
     <cura:setting key="prime_tower_brim_enable">True</cura:setting>
-    <cura:setting key="prime_tower_min_volume">10</cura:setting>
-    <cura:setting key="prime_tower_size">30</cura:setting>
-    <cura:setting key="retraction_amount">8</cura:setting>
+    <cura:setting key="prime_tower_flow">120</cura:setting>
+    <cura:setting key="prime_tower_min_volume">8</cura:setting>
+    <cura:setting key="prime_tower_size">25</cura:setting>
+    <cura:setting key="retraction_amount">8</cura:setting> 
     <cura:setting key="retraction_combing">no_outer_surfaces</cura:setting>
     <cura:setting key="retraction_combing_max_distance">150.0</cura:setting>
-    <cura:setting key="retraction_extra_prime_amount">0.1</cura:setting>
+    <cura:setting key="retraction_extra_prime_amount">0.6</cura:setting>
     <cura:setting key="retraction_hop_enabled">True</cura:setting>
     <cura:setting key="retraction_min_travel">10</cura:setting>
     <cura:setting key="retraction_prime_speed">10</cura:setting>
     <cura:setting key="retraction_speed">15</cura:setting>
     <cura:setting key="roofing_line_width">0.8</cura:setting>
     <cura:setting key="skin_material_flow_layer_0">120.0</cura:setting>
-    <cura:setting key="skin_overlap">50</cura:setting>
-    <cura:setting key="speed_print">15</cura:setting>
+    <cura:setting key="skin_overlap">80</cura:setting>
+    <cura:setting key="speed_ironing">8</cura:setting>
+    <cura:setting key="speed_print">10</cura:setting>
     <cura:setting key="support_enable">True</cura:setting>
     <cura:setting key="support_extruder_nr">1</cura:setting>
     <cura:setting key="support_interface_enable">True</cura:setting>
     <cura:setting key="support_interface_height">0.8</cura:setting>
     <cura:setting key="support_pattern">gyroid</cura:setting>
-    <cura:setting key="support_xy_distance">0.2</cura:setting>
+    <cura:setting key="support_xy_distance">0.1</cura:setting>
     <cura:setting key="support_xy_distance_overhang">0.1</cura:setting>
     <cura:setting key="support_z_distance">0</cura:setting>
     <cura:setting key="switch_extruder_extra_prime_amount">0</cura:setting>
